@@ -1,4 +1,4 @@
-#July 9th notes
+# July 9th notes
 ## SQL Cheat Sheet
 
 ## SQL Tools
