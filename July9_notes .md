@@ -58,11 +58,6 @@ WHERE condition;
 * `%` means zero or more characters.
 * `_` means one character.
 
-```sql
-SELECT *
-FROM employees
-WHERE name LIKE 'A%';
-```
 
 ## NULL Values
 
@@ -70,33 +65,14 @@ WHERE name LIKE 'A%';
 * Do not use `= NULL`.
 * Use `IS NULL` to find empty values.
 
-```sql
-SELECT *
-FROM employees
-WHERE manager_id IS NULL;
-```
-
 ## GROUP BY, HAVING, and COUNT
 
 * `GROUP BY` groups similar values.
 * `COUNT()` counts rows.
 * `HAVING` filters grouped results.
 
-```sql
-SELECT department, COUNT(*)
-FROM employees
-GROUP BY department
-HAVING COUNT(*) > 5;
-```
 
 ## ORDER BY and LIMIT
-
-```sql
-SELECT *
-FROM employees
-ORDER BY salary DESC
-LIMIT 5;
-```
 
 * `ORDER BY` sorts results using `ASC` or `DESC`.
 * `LIMIT` controls how many rows are returned.
