@@ -1,4 +1,5 @@
-# SQL Cheat Sheet
+#July 9th notes
+## SQL Cheat Sheet
 
 ## SQL Tools
 
