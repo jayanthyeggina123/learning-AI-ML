@@ -1,6 +1,6 @@
 # ============================================================
 # AI PERSONALIZED FASHION SHOPPING ASSISTANT
-# COMPLETE STREAMLIT APPLICATION
+# COMPLETE STREAMLIT APPLICATION - 5 PAGES
 # ============================================================
 
 import streamlit as st
@@ -9,6 +9,11 @@ import numpy as np
 import plotly.express as px
 
 from pathlib import Path
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics.pairwise import cosine_similarity
+
+from sentence_transformers import SentenceTransformer
+import faiss
 
 
 # ============================================================
@@ -17,7 +22,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="AI Personalized Fashion Shopping Assistant",
-    page_icon=" ",
+    page_icon="👗",
     layout="wide"
 )
 
@@ -29,15 +34,22 @@ st.set_page_config(
 CURRENT_FOLDER = Path(__file__).parent
 
 FASHION_FILE = CURRENT_FOLDER / "fashion_sales.csv"
-
 PRODUCT_FILE = CURRENT_FOLDER / "product_data.csv"
+RAG_FILE = CURRENT_FOLDER / "rag_product_data.csv"
+FAISS_FILE = CURRENT_FOLDER / "faiss_index.index"
 
 
-# If product_data.csv is not inside Ecommerce_Dashboard,
-# try the parent folder
+# If files are not inside Ecommerce_Dashboard,
+# also check the parent folder
 
 if not PRODUCT_FILE.exists():
     PRODUCT_FILE = CURRENT_FOLDER.parent / "product_data.csv"
+
+if not RAG_FILE.exists():
+    RAG_FILE = CURRENT_FOLDER.parent / "rag_product_data.csv"
+
+if not FAISS_FILE.exists():
+    FAISS_FILE = CURRENT_FOLDER.parent / "faiss_index.index"
 
 
 # ============================================================
@@ -53,7 +65,7 @@ def load_fashion_data():
 fashion_sales = load_fashion_data()
 
 
-# Convert date
+# Convert order date
 
 fashion_sales["order_date"] = pd.to_datetime(
     fashion_sales["order_date"],
@@ -67,20 +79,9 @@ fashion_sales["order_date"] = pd.to_datetime(
 
 if "price_range" not in fashion_sales.columns:
 
-    price_column = "item_price"
-
-    if "price" in fashion_sales.columns:
-        price_column = "price"
-
     fashion_sales["price_range"] = pd.cut(
-        fashion_sales[price_column],
-        bins=[
-            0,
-            50,
-            200,
-            500,
-            float("inf")
-        ],
+        fashion_sales["item_price"],
+        bins=[0, 50, 200, 500, float("inf")],
         labels=[
             "Budget ($0-$50)",
             "Mid Range ($50-$200)",
@@ -101,12 +102,235 @@ def load_product_data():
 
         return pd.read_csv(PRODUCT_FILE)
 
-    else:
-
-        return None
+    return None
 
 
 product_data = load_product_data()
+
+
+# ============================================================
+# LOAD RAG DATA
+# ============================================================
+
+@st.cache_data
+def load_rag_data():
+
+    if RAG_FILE.exists():
+
+        return pd.read_csv(RAG_FILE)
+
+    return None
+
+
+# ============================================================
+# LOAD SENTENCE TRANSFORMER MODEL
+# ============================================================
+
+@st.cache_resource
+def load_embedding_model():
+
+    return SentenceTransformer(
+        "sentence-transformers/all-MiniLM-L6-v2"
+    )
+
+
+# ============================================================
+# LOAD FAISS VECTOR DATABASE
+# ============================================================
+
+@st.cache_resource
+def load_vector_index():
+
+    if FAISS_FILE.exists():
+
+        return faiss.read_index(
+            str(FAISS_FILE)
+        )
+
+    return None
+
+
+# ============================================================
+# RAG RETRIEVAL FUNCTION
+# ============================================================
+
+def retrieve_products(
+    query,
+    embedding_model,
+    vector_index,
+    rag_product_data,
+    k=3
+):
+
+    query_embedding = embedding_model.encode(
+        [query],
+        convert_to_numpy=True
+    )
+
+    distances, indices = vector_index.search(
+        query_embedding.astype("float32"),
+        k=k
+    )
+
+    retrieved_products = rag_product_data.iloc[
+        indices[0]
+    ].copy()
+
+    return retrieved_products
+
+
+# ============================================================
+# RAG ANSWER FUNCTION
+# ============================================================
+
+def create_rag_answer(
+    query,
+    retrieved_products
+):
+
+    results = retrieved_products.copy()
+
+    question = query.lower()
+
+    # --------------------------------------------------------
+    # PRODUCT TYPE FILTERING
+    # --------------------------------------------------------
+
+    product_types = [
+        "jeans",
+        "jacket",
+        "jackets",
+        "shirt",
+        "shirts",
+        "t-shirt",
+        "t-shirts",
+        "dress",
+        "dresses",
+        "hoodie",
+        "hoodies"
+    ]
+
+    for product_type in product_types:
+
+        if product_type in question:
+
+            matching = results[
+                results["product_type"]
+                .astype(str)
+                .str.lower()
+                .str.contains(
+                    product_type.replace("s", ""),
+                    na=False
+                )
+            ]
+
+            if not matching.empty:
+
+                results = matching
+
+            break
+
+
+    # --------------------------------------------------------
+    # AFFORDABLE / BUDGET
+    # --------------------------------------------------------
+
+    if (
+        "affordable" in question
+        or "cheap" in question
+        or "budget" in question
+    ):
+
+        budget_results = results[
+            results["item_price"] <= 100
+        ]
+
+        if not budget_results.empty:
+
+            results = budget_results
+
+
+    # --------------------------------------------------------
+    # HIGH RATINGS / GOOD REVIEWS
+    # --------------------------------------------------------
+
+    if (
+        "high rating" in question
+        or "highly rated" in question
+        or "best rated" in question
+        or "good reviews" in question
+        or "best reviews" in question
+    ):
+
+        results = results.sort_values(
+            [
+                "product_rating",
+                "positive_review_percentage"
+            ],
+            ascending=False
+        )
+
+
+    # --------------------------------------------------------
+    # POSITIVE SENTIMENT
+    # --------------------------------------------------------
+
+    if (
+        "positive sentiment" in question
+        or "positive customer sentiment" in question
+        or "positive reviews" in question
+    ):
+
+        results = results.sort_values(
+            "average_sentiment_score",
+            ascending=False
+        )
+
+
+    # --------------------------------------------------------
+    # FINAL SORT
+    # --------------------------------------------------------
+
+    results = results.sort_values(
+        [
+            "product_rating",
+            "positive_review_percentage",
+            "average_sentiment_score"
+        ],
+        ascending=False
+    )
+
+
+    best_product = results.iloc[0]
+
+
+    answer = f"""
+### Recommended Product
+
+Based on your request, I recommend:
+
+**Product ID:** {best_product['product_id']}
+
+**Brand:** {best_product['brand']}
+
+**Product Type:** {best_product['product_type']}
+
+**Price:** ${best_product['item_price']:.2f}
+
+**Price Range:** {best_product['price_range']}
+
+**Product Rating:** {best_product['product_rating']:.2f}
+
+**Positive Review Percentage:** {best_product['positive_review_percentage']:.1f}%
+
+**Average Customer Sentiment Score:** {best_product['average_sentiment_score']:.2f}
+
+This product was selected from the products retrieved
+from the vector database based on its relevance to your question
+and its product, rating, sentiment, and review information.
+"""
+
+    return answer
 
 
 # ============================================================
@@ -115,20 +339,19 @@ product_data = load_product_data()
 
 st.title("👗 AI Personalized Fashion Shopping Assistant")
 
-st.markdown(
-    """
-    This application combines Fashion Business Analytics,
-    Transformer-Based Sentiment Analysis, AI Product Recommendation,
-    and an Interactive Fashion Assistant.
-    """
-)
+st.markdown("""
+This application combines **Fashion Business Analytics,
+Transformer-Based Sentiment Analysis, Machine Learning,
+K-Means Clustering, AI Product Recommendations,
+LLM-based interaction, and Retrieval-Augmented Generation (RAG)**.
+""")
 
 
 # ============================================================
 # SIDEBAR NAVIGATION
 # ============================================================
 
-st.sidebar.title("Navigation")
+st.sidebar.title("🧭 Navigation")
 
 
 page = st.sidebar.radio(
@@ -139,7 +362,8 @@ page = st.sidebar.radio(
         "📊 Business Analytics",
         "🧠 NLP & Sentiment Analysis",
         "🤖 AI Recommendation System",
-        "💬 AI Fashion Chatbot"
+        "💬 AI Fashion Chatbot",
+        "🔍 RAG Fashion Assistant"
     ]
 )
 
@@ -156,9 +380,9 @@ if page == "📊 Business Analytics":
     st.header("📊 Fashion Business Analytics Dashboard")
 
 
-    # ========================================================
+    # --------------------------------------------------------
     # SIDEBAR FILTERS
-    # ========================================================
+    # --------------------------------------------------------
 
     st.sidebar.subheader("🔍 Filter Data")
 
@@ -167,7 +391,8 @@ if page == "📊 Business Analytics":
 
         "Select Brand",
 
-        ["All"] + sorted(
+        ["All"] +
+        sorted(
             fashion_sales["brand"]
             .dropna()
             .unique()
@@ -180,7 +405,8 @@ if page == "📊 Business Analytics":
 
         "Select Gender",
 
-        ["All"] + sorted(
+        ["All"] +
+        sorted(
             fashion_sales["gender"]
             .dropna()
             .unique()
@@ -193,7 +419,8 @@ if page == "📊 Business Analytics":
 
         "Select Product Type",
 
-        ["All"] + sorted(
+        ["All"] +
+        sorted(
             fashion_sales["product_type"]
             .dropna()
             .unique()
@@ -202,9 +429,9 @@ if page == "📊 Business Analytics":
     )
 
 
-    # ========================================================
+    # --------------------------------------------------------
     # APPLY FILTERS
-    # ========================================================
+    # --------------------------------------------------------
 
     filtered_data = fashion_sales.copy()
 
@@ -231,9 +458,9 @@ if page == "📊 Business Analytics":
         ]
 
 
-    # ========================================================
+    # --------------------------------------------------------
     # KPI CALCULATIONS
-    # ========================================================
+    # --------------------------------------------------------
 
     total_revenue = (
         filtered_data["item_total"]
@@ -254,7 +481,6 @@ if page == "📊 Business Analytics":
 
 
     average_order_value = (
-
         filtered_data
         .groupby("order_id")["item_total"]
         .sum()
@@ -263,15 +489,14 @@ if page == "📊 Business Analytics":
 
 
     average_rating = (
-
         filtered_data["product_rating"]
         .mean()
     )
 
 
-    # ========================================================
+    # --------------------------------------------------------
     # KPI DISPLAY
-    # ========================================================
+    # --------------------------------------------------------
 
     st.subheader("📈 Key Performance Indicators")
 
@@ -309,20 +534,22 @@ if page == "📊 Business Analytics":
     )
 
 
-    # ========================================================
+    st.markdown("---")
+
+
+    # --------------------------------------------------------
     # REVENUE BY BRAND
-    # ========================================================
-
-    st.subheader("💰 Revenue by Brand")
-
+    # --------------------------------------------------------
 
     brand_revenue = (
-
         filtered_data
         .groupby("brand")["item_total"]
         .sum()
-        .sort_values(ascending=False)
         .reset_index()
+        .sort_values(
+            "item_total",
+            ascending=False
+        )
     )
 
 
@@ -334,48 +561,33 @@ if page == "📊 Business Analytics":
 
         y="item_total",
 
-        title="Revenue by Brand",
-
-        labels={
-            "brand": "Brand",
-            "item_total": "Revenue"
-        }
+        title="Revenue by Brand"
     )
 
 
     st.plotly_chart(
         fig_brand,
-        use_container_width=True,
-        key="brand_revenue_chart"
+        use_container_width=True
     )
 
 
-    # ========================================================
+    # --------------------------------------------------------
     # MONTHLY REVENUE
-    # ========================================================
+    # --------------------------------------------------------
 
-    st.subheader("📈 Monthly Revenue Trend")
+    filtered_data["month"] = (
+        filtered_data["order_date"]
+        .dt
+        .to_period("M")
+        .astype(str)
+    )
 
 
     monthly_revenue = (
-
         filtered_data
-        .groupby(
-            filtered_data["order_date"]
-            .dt
-            .to_period("M")
-        )["item_total"]
-
+        .groupby("month")["item_total"]
         .sum()
-
         .reset_index()
-    )
-
-
-    monthly_revenue["order_date"] = (
-
-        monthly_revenue["order_date"]
-        .astype(str)
     )
 
 
@@ -383,7 +595,7 @@ if page == "📊 Business Analytics":
 
         monthly_revenue,
 
-        x="order_date",
+        x="month",
 
         y="item_total",
 
@@ -395,30 +607,22 @@ if page == "📊 Business Analytics":
 
     st.plotly_chart(
         fig_month,
-        use_container_width=True,
-        key="monthly_revenue_chart"
+        use_container_width=True
     )
 
 
-    # ========================================================
-    # TOP SELLING PRODUCTS
-    # ========================================================
-
-    st.subheader("🏆 Top 10 Best Selling Products")
-
+    # --------------------------------------------------------
+    # TOP PRODUCTS
+    # --------------------------------------------------------
 
     top_products = (
-
         filtered_data
         .groupby("product_name")["quantity"]
         .sum()
-
         .sort_values(
             ascending=False
         )
-
         .head(10)
-
         .reset_index()
     )
 
@@ -431,238 +635,32 @@ if page == "📊 Business Analytics":
 
         y="quantity",
 
-        title="Top 10 Best Selling Products"
+        title="Top 10 Best-Selling Products"
     )
 
 
     st.plotly_chart(
         fig_products,
-        use_container_width=True,
-        key="top_products_chart"
+        use_container_width=True
     )
 
 
-    # ========================================================
-    # REVENUE BY GENDER
-    # ========================================================
-
-    st.subheader("👥 Revenue by Gender")
-
-
-    gender_revenue = (
-
-        filtered_data
-        .groupby("gender")["item_total"]
-        .sum()
-        .reset_index()
-    )
-
-
-    fig_gender = px.pie(
-
-        gender_revenue,
-
-        names="gender",
-
-        values="item_total",
-
-        title="Revenue by Gender"
-    )
-
-
-    st.plotly_chart(
-        fig_gender,
-        use_container_width=True,
-        key="gender_revenue_chart"
-    )
-
-
-    # ========================================================
-    # SALES BY PRICE RANGE
-    # ========================================================
-
-    st.subheader("💵 Product Sales by Price Range")
-
-
-    price_sales = (
-
-        filtered_data
-        .groupby(
-            "price_range",
-            observed=False
-        )["quantity"]
-
-        .sum()
-
-        .reset_index()
-    )
-
-
-    fig_price = px.bar(
-
-        price_sales,
-
-        x="price_range",
-
-        y="quantity",
-
-        title="Product Sales by Price Range"
-    )
-
-
-    st.plotly_chart(
-        fig_price,
-        use_container_width=True,
-        key="price_range_chart"
-    )
-
-
-    # ========================================================
-    # CUSTOMER PREFERRED BRANDS
-    # ========================================================
-
-    st.subheader("❤️ Customer Preferred Brands")
-
-
-    preferred_brands = (
-
-        filtered_data
-        .groupby("brand")["user_id"]
-
-        .nunique()
-
-        .sort_values(
-            ascending=False
-        )
-
-        .head(10)
-
-        .reset_index()
-    )
-
-
-    fig_preferred = px.bar(
-
-        preferred_brands,
-
-        x="brand",
-
-        y="user_id",
-
-        title="Top Brands Preferred by Customers"
-    )
-
-
-    st.plotly_chart(
-        fig_preferred,
-        use_container_width=True,
-        key="preferred_brands_chart"
-    )
-
-
-    # ========================================================
-    # CUSTOMER PURCHASE FREQUENCY
-    # ========================================================
-
-    st.subheader("🔁 Customer Purchase Frequency")
-
-
-    purchase_frequency = (
-
-        filtered_data
-        .groupby("user_id")["order_id"]
-
-        .nunique()
-
-        .reset_index()
-    )
-
-
-    fig_frequency = px.histogram(
-
-        purchase_frequency,
-
-        x="order_id",
-
-        nbins=10,
-
-        title="Customer Purchase Frequency Distribution"
-    )
-
-
-    st.plotly_chart(
-        fig_frequency,
-        use_container_width=True,
-        key="purchase_frequency_chart"
-    )
-
-
-    # ========================================================
-    # TOP CUSTOMERS
-    # ========================================================
-
-    st.subheader("🏆 Top Customers by Spending")
-
-
-    top_customers = (
-
-        filtered_data
-        .groupby("user_id")["item_total"]
-
-        .sum()
-
-        .sort_values(
-            ascending=False
-        )
-
-        .head(10)
-
-        .reset_index()
-    )
-
-
-    fig_customers = px.bar(
-
-        top_customers,
-
-        x="user_id",
-
-        y="item_total",
-
-        title="Top Customers by Spending"
-    )
-
-
-    st.plotly_chart(
-        fig_customers,
-        use_container_width=True,
-        key="top_customers_chart"
-    )
-
-
-    # ========================================================
+    # --------------------------------------------------------
     # DOWNLOAD DATA
-    # ========================================================
-
-    st.subheader("📥 Download Filtered Data")
-
-
-    csv = filtered_data.to_csv(
-        index=False
-    )
-
+    # --------------------------------------------------------
 
     st.download_button(
 
-        label="Download Filtered Fashion Data",
+        "📥 Download Filtered Data",
 
-        data=csv,
+        filtered_data.to_csv(
+            index=False
+        ),
 
-        file_name="filtered_fashion_sales.csv",
+        "filtered_fashion_sales.csv",
 
-        mime="text/csv"
+        "text/csv"
     )
-
 
 
 # ============================================================
@@ -674,15 +672,7 @@ if page == "📊 Business Analytics":
 
 elif page == "🧠 NLP & Sentiment Analysis":
 
-    st.header("🧠 NLP & Transformer-Based Sentiment Analysis")
-
-
-    st.write(
-        """
-        This page displays customer review sentiment analysis
-        generated using a Transformer-based DistilBERT model.
-        """
-    )
+    st.header("🧠 AI & NLP Product Intelligence")
 
 
     if product_data is None:
@@ -691,241 +681,157 @@ elif page == "🧠 NLP & Sentiment Analysis":
             "product_data.csv was not found."
         )
 
-        st.stop()
+    else:
+
+        st.write("""
+        This section combines Transformer-based sentiment analysis
+        and K-Means clustering to provide AI-enhanced
+        product intelligence.
+        """)
 
 
-    # ========================================================
-    # SENTIMENT KPIs
-    # ========================================================
-
-    st.subheader("📊 Sentiment Overview")
+        col1, col2, col3, col4 = st.columns(4)
 
 
-    avg_sentiment = (
-
-        product_data[
-            "average_sentiment_score"
-        ]
-        .mean()
-    )
-
-
-    avg_positive = (
-
-        product_data[
-            "positive_review_percentage"
-        ]
-        .mean()
-    )
-
-
-    total_reviews = (
-
-        product_data[
-            "total_reviews"
-        ]
-        .sum()
-    )
-
-
-    sentiment_col1, sentiment_col2, sentiment_col3 = (
-        st.columns(3)
-    )
-
-
-    sentiment_col1.metric(
-
-        "😊 Average Sentiment",
-
-        f"{avg_sentiment:.3f}"
-    )
-
-
-    sentiment_col2.metric(
-
-        "👍 Positive Reviews",
-
-        f"{avg_positive:.1f}%"
-    )
-
-
-    sentiment_col3.metric(
-
-        "📝 Total Reviews",
-
-        f"{total_reviews:,.0f}"
-    )
-
-
-    # ========================================================
-    # SENTIMENT BY BRAND
-    # ========================================================
-
-    st.subheader(
-        "😊 Average Sentiment by Brand"
-    )
-
-
-    brand_sentiment = (
-
-        product_data
-        .groupby("brand")[
-            "average_sentiment_score"
-        ]
-
-        .mean()
-
-        .sort_values(
-            ascending=False
+        col1.metric(
+            "📦 Products",
+            len(product_data)
         )
 
-        .reset_index()
-    )
 
-
-    fig_brand_sentiment = px.bar(
-
-        brand_sentiment,
-
-        x="brand",
-
-        y="average_sentiment_score",
-
-        title="Average Customer Sentiment by Brand"
-    )
-
-
-    st.plotly_chart(
-
-        fig_brand_sentiment,
-
-        use_container_width=True,
-
-        key="brand_sentiment_chart"
-    )
-
-
-    # ========================================================
-    # SENTIMENT BY PRODUCT TYPE
-    # ========================================================
-
-    st.subheader(
-        "👕 Average Sentiment by Product Type"
-    )
-
-
-    product_type_sentiment = (
-
-        product_data
-        .groupby("product_type")[
-            "average_sentiment_score"
-        ]
-
-        .mean()
-
-        .sort_values(
-            ascending=False
+        col2.metric(
+            "⭐ Avg Rating",
+            f"{product_data['product_rating'].mean():.2f}"
         )
 
-        .reset_index()
-    )
 
-
-    fig_product_sentiment = px.bar(
-
-        product_type_sentiment,
-
-        x="product_type",
-
-        y="average_sentiment_score",
-
-        title="Customer Sentiment by Product Type"
-    )
-
-
-    st.plotly_chart(
-
-        fig_product_sentiment,
-
-        use_container_width=True,
-
-        key="product_type_sentiment_chart"
-    )
-
-
-    # ========================================================
-    # POSITIVE REVIEW PERCENTAGE
-    # ========================================================
-
-    st.subheader(
-        "👍 Positive Review Percentage by Product"
-    )
-
-
-    positive_products = (
-
-        product_data
-
-        .sort_values(
-            "positive_review_percentage",
-            ascending=False
+        col3.metric(
+            "😊 Avg Positive Reviews",
+            f"{product_data['positive_review_percentage'].mean():.1f}%"
         )
 
-        .head(10)
-    )
+
+        col4.metric(
+            "🧩 Clusters",
+            product_data["cluster"].nunique()
+        )
 
 
-    fig_positive = px.bar(
-
-        positive_products,
-
-        x="product_id",
-
-        y="positive_review_percentage",
-
-        color="brand",
-
-        title="Top Products by Positive Review Percentage"
-    )
+        st.markdown("---")
 
 
-    st.plotly_chart(
+        # ----------------------------------------------------
+        # SENTIMENT VS RATING
+        # ----------------------------------------------------
 
-        fig_positive,
+        fig_sentiment = px.scatter(
 
-        use_container_width=True,
+            product_data,
 
-        key="positive_reviews_chart"
-    )
+            x="average_sentiment_score",
 
+            y="product_rating",
 
-    # ========================================================
-    # PRODUCT SENTIMENT TABLE
-    # ========================================================
+            color="cluster",
 
-    st.subheader(
-        "📋 Product-Level Sentiment Data"
-    )
+            size="total_reviews",
 
-
-    st.dataframe(
-
-        product_data[
-            [
+            hover_data=[
                 "product_id",
                 "brand",
-                "product_type",
-                "item_price",
-                "product_rating",
-                "average_sentiment_score",
+                "product_type"
+            ],
+
+            title="Customer Sentiment vs Product Rating"
+        )
+
+
+        st.plotly_chart(
+            fig_sentiment,
+            use_container_width=True
+        )
+
+
+        # ----------------------------------------------------
+        # POSITIVE REVIEW ANALYSIS
+        # ----------------------------------------------------
+
+        top_reviews = (
+            product_data
+            .sort_values(
                 "positive_review_percentage",
-                "total_reviews"
+                ascending=False
+            )
+            .head(10)
+        )
+
+
+        fig_reviews = px.bar(
+
+            top_reviews,
+
+            x="product_id",
+
+            y="positive_review_percentage",
+
+            color="brand",
+
+            title="Top Products by Positive Review Percentage"
+        )
+
+
+        st.plotly_chart(
+            fig_reviews,
+            use_container_width=True
+        )
+
+
+        # ----------------------------------------------------
+        # CLUSTER ANALYSIS
+        # ----------------------------------------------------
+
+        if "cluster" in product_data.columns:
+
+            cluster_counts = (
+                product_data["cluster"]
+                .value_counts()
+                .reset_index()
+            )
+
+
+            cluster_counts.columns = [
+                "Cluster",
+                "Number of Products"
             ]
-        ],
 
-        use_container_width=True
-    )
 
+            fig_cluster = px.bar(
+
+                cluster_counts,
+
+                x="Cluster",
+
+                y="Number of Products",
+
+                title="Distribution of Products Across Clusters"
+            )
+
+
+            st.plotly_chart(
+                fig_cluster,
+                use_container_width=True
+            )
+
+
+        st.subheader(
+            "📋 AI-Enhanced Product Data"
+        )
+
+
+        st.dataframe(
+            product_data,
+            use_container_width=True
+        )
 
 
 # ============================================================
@@ -938,17 +844,7 @@ elif page == "🧠 NLP & Sentiment Analysis":
 elif page == "🤖 AI Recommendation System":
 
     st.header(
-        "🤖 AI-Enhanced Fashion Recommendation System"
-    )
-
-
-    st.write(
-        """
-        The recommendation system uses product features including
-        brand, product type, price, product rating, customer sentiment,
-        positive review percentage, and machine learning clusters
-        to recommend similar fashion products.
-        """
+        "🤖 AI Personalized Fashion Recommendation System"
     )
 
 
@@ -958,226 +854,191 @@ elif page == "🤖 AI Recommendation System":
             "product_data.csv was not found."
         )
 
-        st.stop()
-
-
-    # ========================================================
-    # USER FILTERS
-    # ========================================================
-
-    st.subheader(
-        "🔍 Select Your Fashion Preferences"
-    )
-
-
-    selected_brand_ai = st.selectbox(
-
-        "Preferred Brand",
-
-        ["All"] + sorted(
-            product_data[
-                "brand"
-            ]
-            .dropna()
-            .unique()
-            .tolist()
-        ),
-
-        key="ai_brand"
-    )
-
-
-    selected_type_ai = st.selectbox(
-
-        "Preferred Product Type",
-
-        ["All"] + sorted(
-            product_data[
-                "product_type"
-            ]
-            .dropna()
-            .unique()
-            .tolist()
-        ),
-
-        key="ai_product_type"
-    )
-
-
-    selected_price_ai = st.selectbox(
-
-        "Preferred Price Range",
-
-        ["All"] + sorted(
-            product_data[
-                "price_range"
-            ]
-            .dropna()
-            .astype(str)
-            .unique()
-            .tolist()
-        ),
-
-        key="ai_price_range"
-    )
-
-
-    # ========================================================
-    # APPLY RECOMMENDATION FILTERS
-    # ========================================================
-
-    recommendations = product_data.copy()
-
-
-    if selected_brand_ai != "All":
-
-        recommendations = recommendations[
-            recommendations["brand"]
-            == selected_brand_ai
-        ]
-
-
-    if selected_type_ai != "All":
-
-        recommendations = recommendations[
-            recommendations["product_type"]
-            == selected_type_ai
-        ]
-
-
-    if selected_price_ai != "All":
-
-        recommendations = recommendations[
-            recommendations["price_range"]
-            .astype(str)
-            == selected_price_ai
-        ]
-
-
-    # ========================================================
-    # CREATE AI RECOMMENDATION SCORE
-    # ========================================================
-
-    recommendations = recommendations.copy()
-
-
-    # Fill missing values
-
-    recommendations[
-        "average_sentiment_score"
-    ] = (
-        recommendations[
-            "average_sentiment_score"
-        ]
-        .fillna(0)
-    )
-
-
-    recommendations[
-        "positive_review_percentage"
-    ] = (
-        recommendations[
-            "positive_review_percentage"
-        ]
-        .fillna(0)
-    )
-
-
-    recommendations[
-        "product_rating"
-    ] = (
-        recommendations[
-            "product_rating"
-        ]
-        .fillna(0)
-    )
-
-
-    # Normalize rating
-
-    recommendations["rating_score"] = (
-
-        recommendations[
-            "product_rating"
-        ] / 5
-    )
-
-
-    # Normalize sentiment
-
-    recommendations["sentiment_score"] = (
-
-        recommendations[
-            "average_sentiment_score"
-        ] + 1
-    ) / 2
-
-
-    # Normalize positive reviews
-
-    recommendations["positive_score"] = (
-
-        recommendations[
-            "positive_review_percentage"
-        ] / 100
-    )
-
-
-    # FINAL AI SCORE
-
-    recommendations[
-        "recommendation_score"
-    ] = (
-
-        0.40
-        * recommendations["rating_score"]
-
-        +
-
-        0.35
-        * recommendations["sentiment_score"]
-
-        +
-
-        0.25
-        * recommendations["positive_score"]
-    )
-
-
-    recommendations = (
-
-        recommendations
-
-        .sort_values(
-            "recommendation_score",
-            ascending=False
-        )
-    )
-
-
-    # ========================================================
-    # DISPLAY TOP RECOMMENDATIONS
-    # ========================================================
-
-    st.subheader(
-        "⭐ Top AI Product Recommendations"
-    )
-
-
-    top_recommendations = (
-
-        recommendations
-        .head(10)
-    )
-
-
-    if len(top_recommendations) == 0:
-
-        st.warning(
-            "No products found for the selected preferences."
-        )
-
     else:
+
+        st.write("""
+        Select your preferences and receive AI-based fashion
+        recommendations using product ratings, customer sentiment,
+        positive reviews, and product information.
+        """)
+
+
+        col1, col2 = st.columns(2)
+
+
+        with col1:
+
+            selected_brand = st.selectbox(
+
+                "Preferred Brand",
+
+                ["All"] +
+                sorted(
+                    product_data["brand"]
+                    .dropna()
+                    .unique()
+                    .tolist()
+                ),
+
+                key="recommendation_brand"
+            )
+
+
+        with col2:
+
+            selected_type = st.selectbox(
+
+                "Preferred Product Type",
+
+                ["All"] +
+                sorted(
+                    product_data["product_type"]
+                    .dropna()
+                    .unique()
+                    .tolist()
+                ),
+
+                key="recommendation_type"
+            )
+
+
+        selected_price = st.selectbox(
+
+            "Preferred Price Range",
+
+            ["All"] +
+            sorted(
+                product_data["price_range"]
+                .dropna()
+                .unique()
+                .tolist()
+            ),
+
+            key="recommendation_price"
+        )
+
+
+        recommendations = product_data.copy()
+
+
+        if selected_brand != "All":
+
+            recommendations = recommendations[
+                recommendations["brand"]
+                == selected_brand
+            ]
+
+
+        if selected_type != "All":
+
+            recommendations = recommendations[
+                recommendations["product_type"]
+                == selected_type
+            ]
+
+
+        if selected_price != "All":
+
+            recommendations = recommendations[
+                recommendations["price_range"]
+                == selected_price
+            ]
+
+
+        # ----------------------------------------------------
+        # HANDLE MISSING VALUES
+        # ----------------------------------------------------
+
+        recommendations[
+            "average_sentiment_score"
+        ] = (
+            recommendations[
+                "average_sentiment_score"
+            ]
+            .fillna(0)
+        )
+
+
+        recommendations[
+            "positive_review_percentage"
+        ] = (
+            recommendations[
+                "positive_review_percentage"
+            ]
+            .fillna(0)
+        )
+
+
+        recommendations[
+            "product_rating"
+        ] = (
+            recommendations[
+                "product_rating"
+            ]
+            .fillna(0)
+        )
+
+
+        # ----------------------------------------------------
+        # AI RECOMMENDATION SCORE
+        # ----------------------------------------------------
+
+        recommendations["rating_score"] = (
+            recommendations["product_rating"] / 5
+        )
+
+
+        recommendations["sentiment_score"] = (
+            recommendations[
+                "average_sentiment_score"
+            ] + 1
+        ) / 2
+
+
+        recommendations["positive_score"] = (
+            recommendations[
+                "positive_review_percentage"
+            ] / 100
+        )
+
+
+        recommendations[
+            "recommendation_score"
+        ] = (
+
+            0.40
+            * recommendations["rating_score"]
+
+            +
+
+            0.35
+            * recommendations["sentiment_score"]
+
+            +
+
+            0.25
+            * recommendations["positive_score"]
+        )
+
+
+        recommendations = (
+            recommendations
+            .sort_values(
+                "recommendation_score",
+                ascending=False
+            )
+        )
+
+
+        st.subheader(
+            "⭐ Top AI Product Recommendations"
+        )
+
+
+        top_recommendations = (
+            recommendations.head(10)
+        )
+
 
         st.dataframe(
 
@@ -1199,10 +1060,6 @@ elif page == "🤖 AI Recommendation System":
         )
 
 
-        # ====================================================
-        # RECOMMENDATION VISUALIZATION
-        # ====================================================
-
         fig_recommendation = px.bar(
 
             top_recommendations,
@@ -1213,71 +1070,14 @@ elif page == "🤖 AI Recommendation System":
 
             color="brand",
 
-            title="Top AI Recommended Fashion Products"
+            title="Top AI Recommended Products"
         )
 
 
         st.plotly_chart(
-
             fig_recommendation,
-
-            use_container_width=True,
-
-            key="recommendation_chart"
+            use_container_width=True
         )
-
-
-    # ========================================================
-    # CLUSTER ANALYSIS
-    # ========================================================
-
-    if "cluster" in product_data.columns:
-
-
-        st.subheader(
-            "🧩 Machine Learning Product Clusters"
-        )
-
-
-        cluster_counts = (
-
-            product_data[
-                "cluster"
-            ]
-            .value_counts()
-            .reset_index()
-        )
-
-
-        cluster_counts.columns = [
-
-            "Cluster",
-
-            "Number of Products"
-        ]
-
-
-        fig_cluster = px.bar(
-
-            cluster_counts,
-
-            x="Cluster",
-
-            y="Number of Products",
-
-            title="Distribution of Products Across AI Clusters"
-        )
-
-
-        st.plotly_chart(
-
-            fig_cluster,
-
-            use_container_width=True,
-
-            key="cluster_chart"
-        )
-
 
 
 # ============================================================
@@ -1294,272 +1094,391 @@ elif page == "💬 AI Fashion Chatbot":
     )
 
 
-    st.write(
-        """
-        Ask questions about fashion products, brands, product types,
-        prices, ratings, customer sentiment, and recommendations.
-        """
+    st.write("""
+    Ask questions about fashion products and receive
+    recommendations based on the available product information.
+    """)
+
+
+    st.info("""
+Examples:
+
+• Recommend affordable jeans with good reviews
+
+• Show highly rated jackets
+
+• Recommend products with positive customer sentiment
+
+• Which products have the best customer reviews?
+
+• Recommend premium clothing with high ratings
+""")
+
+
+    user_question = st.text_area(
+        "Ask your fashion question:",
+        key="chatbot_question"
     )
 
 
-    if product_data is None:
+    if st.button(
+        "Ask AI Chatbot",
+        key="chatbot_button"
+    ):
 
-        st.error(
-            "product_data.csv was not found."
-        )
+        if user_question.strip():
 
-        st.stop()
+            results = product_data.copy()
 
-
-    # ========================================================
-    # INITIALIZE CHAT HISTORY
-    # ========================================================
-
-    if "messages" not in st.session_state:
-
-        st.session_state.messages = []
+            question = user_question.lower()
 
 
-    # ========================================================
-    # DISPLAY CHAT HISTORY
-    # ========================================================
+            # PRODUCT TYPE DETECTION
 
-    for message in st.session_state.messages:
+            for product_type in [
+                "jeans",
+                "jacket",
+                "shirt",
+                "dress",
+                "hoodie"
+            ]:
 
-        with st.chat_message(
-            message["role"]
-        ):
+                if product_type in question:
 
-            st.write(
-                message["content"]
-            )
+                    matching = results[
+                        results["product_type"]
+                        .astype(str)
+                        .str.lower()
+                        .str.contains(
+                            product_type,
+                            na=False
+                        )
+                    ]
 
+                    if not matching.empty:
 
-    # ========================================================
-    # USER INPUT
-    # ========================================================
+                        results = matching
 
-    user_question = st.chat_input(
-        "Ask about fashion products..."
-    )
-
-
-    if user_question:
-
-
-        # Display user question
-
-        with st.chat_message("user"):
-
-            st.write(user_question)
+                    break
 
 
-        st.session_state.messages.append(
+            # AFFORDABLE
 
-            {
-                "role": "user",
-                "content": user_question
-            }
-        )
+            if (
+                "affordable" in question
+                or "cheap" in question
+                or "budget" in question
+            ):
 
-
-        # ====================================================
-        # BASIC DATA-DRIVEN CHATBOT LOGIC
-        # ====================================================
-
-        question = user_question.lower()
-
-
-        response = ""
-
-
-        # ----------------------------------------------------
-        # BEST RATED PRODUCTS
-        # ----------------------------------------------------
-
-        if (
-            "best rated" in question
-            or "highest rated" in question
-        ):
-
-            best_products = (
-
-                product_data
-
-                .sort_values(
-                    "product_rating",
-                    ascending=False
-                )
-
-                .head(5)
-            )
-
-
-            response = (
-                "Here are the highest-rated fashion products:\n\n"
-            )
-
-
-            for _, row in best_products.iterrows():
-
-                response += (
-
-                    f"• Product ID: {row['product_id']} | "
-                    f"Brand: {row['brand']} | "
-                    f"Type: {row['product_type']} | "
-                    f"Rating: {row['product_rating']:.2f}\n"
-                )
-
-
-        # ----------------------------------------------------
-        # POSITIVE SENTIMENT
-        # ----------------------------------------------------
-
-        elif (
-            "positive" in question
-            or "sentiment" in question
-        ):
-
-            best_sentiment = (
-
-                product_data
-
-                .sort_values(
-                    "positive_review_percentage",
-                    ascending=False
-                )
-
-                .head(5)
-            )
-
-
-            response = (
-                "These products have strong positive customer sentiment:\n\n"
-            )
-
-
-            for _, row in best_sentiment.iterrows():
-
-                response += (
-
-                    f"• {row['product_id']} | "
-                    f"{row['brand']} | "
-                    f"{row['product_type']} | "
-                    f"Positive Reviews: "
-                    f"{row['positive_review_percentage']:.1f}%\n"
-                )
-
-
-        # ----------------------------------------------------
-        # BRAND QUESTIONS
-        # ----------------------------------------------------
-
-        elif "brand" in question:
-
-            brand_summary = (
-
-                product_data
-                .groupby("brand")[
-                    "product_rating"
+                affordable = results[
+                    results["item_price"] <= 100
                 ]
 
-                .mean()
+                if not affordable.empty:
 
-                .sort_values(
+                    results = affordable
+
+
+            # PREMIUM
+
+            if "premium" in question:
+
+                premium = results[
+                    results["item_price"] >= 200
+                ]
+
+                if not premium.empty:
+
+                    results = premium
+
+
+            # POSITIVE SENTIMENT
+
+            if (
+                "positive sentiment" in question
+                or "positive reviews" in question
+            ):
+
+                results = results.sort_values(
+                    "average_sentiment_score",
                     ascending=False
                 )
 
-                .head(5)
+
+            # BEST REVIEWS
+
+            results = results.sort_values(
+
+                [
+                    "product_rating",
+                    "positive_review_percentage",
+                    "average_sentiment_score"
+                ],
+
+                ascending=False
             )
 
 
-            response = (
-                "Top brands based on average product rating:\n\n"
+            results = results.head(5)
+
+
+            best_product = results.iloc[0]
+
+
+            st.subheader(
+                "🤖 AI Fashion Assistant Response"
             )
 
 
-            for brand, rating in brand_summary.items():
+            st.success(
+                f"""
+I recommend the following product based on your question:
 
-                response += (
+**Product ID:** {best_product['product_id']}
 
-                    f"• {brand}: "
-                    f"{rating:.2f} average rating\n"
-                )
+**Brand:** {best_product['brand']}
+
+**Product Type:** {best_product['product_type']}
+
+**Price:** ${best_product['item_price']:.2f}
+
+**Price Range:** {best_product['price_range']}
+
+**Product Rating:** {best_product['product_rating']:.2f}
+
+**Positive Review Percentage:** {best_product['positive_review_percentage']:.1f}%
+
+**Average Customer Sentiment Score:** {best_product['average_sentiment_score']:.2f}
+
+This recommendation was generated using product characteristics,
+customer ratings, sentiment analysis, and review information.
+"""
+            )
 
 
-        # ----------------------------------------------------
-        # PRODUCT RECOMMENDATION
-        # ----------------------------------------------------
+            st.subheader(
+                "📦 Related Product Recommendations"
+            )
 
-        elif (
-            "recommend" in question
-            or "recommendation" in question
-        ):
 
-            recommended = (
+            st.dataframe(
 
-                product_data
-
-                .sort_values(
+                results[
                     [
+                        "product_id",
+                        "brand",
+                        "product_type",
+                        "price_range",
+                        "item_price",
                         "product_rating",
-                        "positive_review_percentage"
-                    ],
+                        "positive_review_percentage",
+                        "average_sentiment_score"
+                    ]
+                ],
 
-                    ascending=False
-                )
-
-                .head(5)
+                use_container_width=True
             )
 
-
-            response = (
-                "Based on ratings and customer sentiment, "
-                "I recommend these products:\n\n"
-            )
-
-
-            for _, row in recommended.iterrows():
-
-                response += (
-
-                    f"• {row['product_id']} | "
-                    f"{row['brand']} | "
-                    f"{row['product_type']} | "
-                    f"Rating: {row['product_rating']:.2f}\n"
-                )
-
-
-        # ----------------------------------------------------
-        # DEFAULT RESPONSE
-        # ----------------------------------------------------
 
         else:
 
-            response = (
-                "I can help you explore the fashion dataset. "
-                "Try asking questions such as:\n\n"
-                "• What are the best rated products?\n"
-                "• Which products have positive sentiment?\n"
-                "• Which brands perform best?\n"
-                "• Recommend some fashion products.\n"
-                "• Show me products with high customer ratings."
+            st.warning(
+                "Please enter a question."
             )
 
 
-        # ====================================================
-        # DISPLAY AI RESPONSE
-        # ====================================================
+# ============================================================
+# ============================================================
+# PAGE 5
+# RAG FASHION ASSISTANT
+# ============================================================
+# ============================================================
 
-        with st.chat_message("assistant"):
+elif page == "🔍 RAG Fashion Assistant":
 
-            st.write(response)
+    st.header(
+        "🔍 RAG-Powered Fashion Shopping Assistant"
+    )
 
 
-        st.session_state.messages.append(
+    st.write("""
+    This page demonstrates a Retrieval-Augmented Generation (RAG)
+    system using Sentence Transformer embeddings and a FAISS
+    vector database.
+    """)
 
-            {
-                "role": "assistant",
-                "content": response
-            }
-        )
+
+    st.markdown("""
+
+""")
+
+
+    st.info("""
+Example questions:
+
+• Recommend affordable jeans with good customer reviews
+
+• Show highly rated jackets
+
+• Which products have the best customer sentiment?
+
+• Recommend premium clothing with high ratings
+""")
+
+
+    user_question = st.text_area(
+        "Ask the RAG Fashion Assistant:",
+        key="rag_question"
+    )
+
+
+    if st.button(
+        "🔍 Ask RAG Assistant",
+        key="rag_button"
+    ):
+
+        if user_question.strip():
+
+            rag_product_data = load_rag_data()
+
+
+            if rag_product_data is None:
+
+                st.error("""
+rag_product_data.csv was not found.
+
+Please make sure it is inside your
+Ecommerce_Dashboard folder.
+""")
+
+            else:
+
+                try:
+
+                    with st.spinner(
+                        "Searching the FAISS vector database..."
+                    ):
+
+                        embedding_model = (
+                            load_embedding_model()
+                        )
+
+
+                        vector_index = (
+                            load_vector_index()
+                        )
+
+
+                        if vector_index is None:
+
+                            st.error("""
+faiss_index.index was not found.
+
+Please make sure the FAISS vector database
+file is inside your Ecommerce_Dashboard folder.
+""")
+
+                        else:
+
+                            retrieved_products = (
+                                retrieve_products(
+
+                                    user_question,
+
+                                    embedding_model,
+
+                                    vector_index,
+
+                                    rag_product_data,
+
+                                    k=3
+                                )
+                            )
+
+
+                            answer = create_rag_answer(
+
+                                user_question,
+
+                                retrieved_products
+                            )
+
+
+                            st.subheader(
+                                "🤖 RAG Fashion Assistant Response"
+                            )
+
+
+                            st.success(
+                                answer
+                            )
+
+
+                            st.subheader(
+                                "📦 Products Retrieved from Vector Database"
+                            )
+
+
+                            st.caption("""
+These products were retrieved using semantic search
+from the FAISS vector database.
+""")
+
+
+                            display_columns = [
+
+                                "product_id",
+
+                                "brand",
+
+                                "product_type",
+
+                                "price_range",
+
+                                "item_price",
+
+                                "product_rating",
+
+                                "average_sentiment_score",
+
+                                "positive_review_percentage",
+
+                                "total_reviews",
+
+                                "cluster"
+                            ]
+
+
+                            available_columns = [
+
+                                column
+
+                                for column in display_columns
+
+                                if column
+                                in retrieved_products.columns
+                            ]
+
+
+                            st.dataframe(
+
+                                retrieved_products[
+                                    available_columns
+                                ],
+
+                                use_container_width=True
+                            )
+
+
+                except Exception as e:
+
+                    st.error(
+                        f"RAG system error: {e}"
+                    )
+
+
+        else:
+
+            st.warning(
+                "Please enter a question."
+            )

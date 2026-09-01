@@ -1,0 +1,5326 @@
+product_id,brand,product_type,price_range,item_price,product_rating,average_sentiment_score,positive_review_percentage,total_reviews,cluster,rag_document
+P001247,Nimbus,Jeans,Mid Range ($50-$200),67.54,3.58,0.6666691104571024,83.33333333333334,6,4,"
+Product ID: P001247
+
+Brand: Nimbus
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $67.54
+
+Product Rating: 3.58
+
+Average Customer Sentiment Score:
+0.6666691104571024
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+4
+"
+P001002,Harbor,Skirt,Premium ($200-$500),209.1,3.68,0.7764929135640463,88.88888888888889,9,1,"
+Product ID: P001002
+
+Brand: Harbor
+
+Product Type: Skirt
+
+Price Range: Premium ($200-$500)
+
+Price: $209.1
+
+Product Rating: 3.68
+
+Average Customer Sentiment Score:
+0.7764929135640463
+
+Positive Review Percentage:
+88.88888888888889%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P001301,Astra,Dress,Mid Range ($50-$200),114.51,2.87,0.9998466372489928,100.0,6,2,"
+Product ID: P001301
+
+Brand: Astra
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $114.51
+
+Product Rating: 2.87
+
+Average Customer Sentiment Score:
+0.9998466372489928
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P000162,Orion,Jacket,Mid Range ($50-$200),151.39,3.99,0.4986882209777832,75.0,8,0,"
+Product ID: P000162
+
+Brand: Orion
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $151.39
+
+Product Rating: 3.99
+
+Average Customer Sentiment Score:
+0.4986882209777832
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+0
+"
+P000022,Nimbus,T-Shirt,Budget ($0-$50),37.65,4.54,0.6654168963432312,83.33333333333334,6,1,"
+Product ID: P000022
+
+Brand: Nimbus
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $37.65
+
+Product Rating: 4.54
+
+Average Customer Sentiment Score:
+0.6654168963432312
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P001370,Harbor,T-Shirt,Budget ($0-$50),38.92,3.94,0.712680459022522,85.71428571428571,7,1,"
+Product ID: P001370
+
+Brand: Harbor
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $38.92
+
+Product Rating: 3.94
+
+Average Customer Sentiment Score:
+0.712680459022522
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000614,Solace,T-Shirt,Mid Range ($50-$200),135.38,3.3,0.5990276336669922,80.0,10,1,"
+Product ID: P000614
+
+Brand: Solace
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $135.38
+
+Product Rating: 3.3
+
+Average Customer Sentiment Score:
+0.5990276336669922
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P000494,Astra,Sweater,Mid Range ($50-$200),148.44,3.65,0.9988925059636434,100.0,6,2,"
+Product ID: P000494
+
+Brand: Astra
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $148.44
+
+Product Rating: 3.65
+
+Average Customer Sentiment Score:
+0.9988925059636434
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P001080,Acme,Dress,Budget ($0-$50),18.31,4.63,0.5547744168175591,77.77777777777779,9,3,"
+Product ID: P001080
+
+Brand: Acme
+
+Product Type: Dress
+
+Price Range: Budget ($0-$50)
+
+Price: $18.31
+
+Product Rating: 4.63
+
+Average Customer Sentiment Score:
+0.5547744168175591
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+3
+"
+P000304,Willow,T-Shirt,Mid Range ($50-$200),120.82,2.68,0.4544166760011153,72.72727272727273,11,1,"
+Product ID: P000304
+
+Brand: Willow
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $120.82
+
+Product Rating: 2.68
+
+Average Customer Sentiment Score:
+0.4544166760011153
+
+Positive Review Percentage:
+72.72727272727273%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P000991,Everest,Skirt,Budget ($0-$50),19.08,4.39,0.5540835658709208,77.77777777777779,9,1,"
+Product ID: P000991
+
+Brand: Everest
+
+Product Type: Skirt
+
+Price Range: Budget ($0-$50)
+
+Price: $19.08
+
+Product Rating: 4.39
+
+Average Customer Sentiment Score:
+0.5540835658709208
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P000310,Orion,Sweater,Mid Range ($50-$200),67.11,3.06,0.7126729743821281,85.71428571428571,7,2,"
+Product ID: P000310
+
+Brand: Orion
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $67.11
+
+Product Rating: 3.06
+
+Average Customer Sentiment Score:
+0.7126729743821281
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+2
+"
+P001639,Everest,Shirt,Premium ($200-$500),253.6,3.94,-0.0001141130924224,50.0,12,3,"
+Product ID: P001639
+
+Brand: Everest
+
+Product Type: Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $253.6
+
+Product Rating: 3.94
+
+Average Customer Sentiment Score:
+-0.0001141130924224
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+12
+
+Product Cluster:
+3
+"
+P000748,Willow,T-Shirt,Mid Range ($50-$200),128.37,2.86,0.3322356144587199,66.66666666666666,6,1,"
+Product ID: P000748
+
+Brand: Willow
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $128.37
+
+Product Rating: 2.86
+
+Average Customer Sentiment Score:
+0.3322356144587199
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P000967,Astra,T-Shirt,Mid Range ($50-$200),106.52,3.3,0.4998095706105232,75.0,8,2,"
+Product ID: P000967
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $106.52
+
+Product Rating: 3.3
+
+Average Customer Sentiment Score:
+0.4998095706105232
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+2
+"
+P001601,GreenLeaf,Shirt,Mid Range ($50-$200),93.07,4.61,0.427864704813276,71.42857142857143,7,3,"
+Product ID: P001601
+
+Brand: GreenLeaf
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $93.07
+
+Product Rating: 4.61
+
+Average Customer Sentiment Score:
+0.427864704813276
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P000455,NeoTech,Jacket,Mid Range ($50-$200),65.06,4.45,0.6663092076778412,83.33333333333334,6,0,"
+Product ID: P000455
+
+Brand: NeoTech
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $65.06
+
+Product Rating: 4.45
+
+Average Customer Sentiment Score:
+0.6663092076778412
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+0
+"
+P001871,GreenLeaf,Jeans,Mid Range ($50-$200),118.36,2.75,0.3331444064776103,66.66666666666666,6,4,"
+Product ID: P001871
+
+Brand: GreenLeaf
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $118.36
+
+Product Rating: 2.75
+
+Average Customer Sentiment Score:
+0.3331444064776103
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+4
+"
+P000864,NeoTech,Shirt,Mid Range ($50-$200),168.44,3.48,0.5992393910884857,80.0,10,3,"
+Product ID: P000864
+
+Brand: NeoTech
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $168.44
+
+Product Rating: 3.48
+
+Average Customer Sentiment Score:
+0.5992393910884857
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+3
+"
+P000775,Everest,Hoodie,Mid Range ($50-$200),69.1,3.82,0.5544334120220609,77.77777777777779,9,5,"
+Product ID: P000775
+
+Brand: Everest
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $69.1
+
+Product Rating: 3.82
+
+Average Customer Sentiment Score:
+0.5544334120220609
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+5
+"
+P001290,Solace,T-Shirt,Mid Range ($50-$200),108.57,4.07,0.3989358961582184,70.0,10,1,"
+Product ID: P001290
+
+Brand: Solace
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $108.57
+
+Product Rating: 4.07
+
+Average Customer Sentiment Score:
+0.3989358961582184
+
+Positive Review Percentage:
+70.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P001430,Astra,Jeans,Budget ($0-$50),41.44,3.29,0.1982027888298034,60.0,10,4,"
+Product ID: P001430
+
+Brand: Astra
+
+Product Type: Jeans
+
+Price Range: Budget ($0-$50)
+
+Price: $41.44
+
+Product Rating: 3.29
+
+Average Customer Sentiment Score:
+0.1982027888298034
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+4
+"
+P000059,Orion,Dress,Mid Range ($50-$200),176.48,3.98,0.7481854408979416,87.5,8,3,"
+Product ID: P000059
+
+Brand: Orion
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $176.48
+
+Product Rating: 3.98
+
+Average Customer Sentiment Score:
+0.7481854408979416
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P000826,Acme,T-Shirt,Budget ($0-$50),26.79,4.38,0.5989521622657776,80.0,5,1,"
+Product ID: P000826
+
+Brand: Acme
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $26.79
+
+Product Rating: 4.38
+
+Average Customer Sentiment Score:
+0.5989521622657776
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+1
+"
+P000542,Everest,Jacket,Budget ($0-$50),36.54,3.77,0.5377371173638564,76.92307692307693,13,0,"
+Product ID: P000542
+
+Brand: Everest
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $36.54
+
+Product Rating: 3.77
+
+Average Customer Sentiment Score:
+0.5377371173638564
+
+Positive Review Percentage:
+76.92307692307693%
+
+Total Customer Reviews:
+13
+
+Product Cluster:
+0
+"
+P000113,Harbor,Jacket,Budget ($0-$50),22.55,4.39,0.5535397926966349,77.77777777777779,9,0,"
+Product ID: P000113
+
+Brand: Harbor
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $22.55
+
+Product Rating: 4.39
+
+Average Customer Sentiment Score:
+0.5535397926966349
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+0
+"
+P000032,Orion,T-Shirt,Premium ($200-$500),265.99,3.75,0.5544438494576348,77.77777777777779,9,1,"
+Product ID: P000032
+
+Brand: Orion
+
+Product Type: T-Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $265.99
+
+Product Rating: 3.75
+
+Average Customer Sentiment Score:
+0.5544438494576348
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P001424,GreenLeaf,T-Shirt,Mid Range ($50-$200),85.29,4.72,0.8317337334156036,91.66666666666666,12,1,"
+Product ID: P001424
+
+Brand: GreenLeaf
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $85.29
+
+Product Rating: 4.72
+
+Average Customer Sentiment Score:
+0.8317337334156036
+
+Positive Review Percentage:
+91.66666666666666%
+
+Total Customer Reviews:
+12
+
+Product Cluster:
+1
+"
+P000111,GreenLeaf,Skirt,Mid Range ($50-$200),55.21,3.86,0.7989197492599487,90.0,10,1,"
+Product ID: P000111
+
+Brand: GreenLeaf
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $55.21
+
+Product Rating: 3.86
+
+Average Customer Sentiment Score:
+0.7989197492599487
+
+Positive Review Percentage:
+90.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P000522,Harbor,Skirt,Budget ($0-$50),17.96,3.17,-0.3341869215170542,33.33333333333333,6,1,"
+Product ID: P000522
+
+Brand: Harbor
+
+Product Type: Skirt
+
+Price Range: Budget ($0-$50)
+
+Price: $17.96
+
+Product Rating: 3.17
+
+Average Customer Sentiment Score:
+-0.3341869215170542
+
+Positive Review Percentage:
+33.33333333333333%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P000822,Astra,Sweater,Budget ($0-$50),36.08,2.58,0.1997144699096679,60.0,5,2,"
+Product ID: P000822
+
+Brand: Astra
+
+Product Type: Sweater
+
+Price Range: Budget ($0-$50)
+
+Price: $36.08
+
+Product Rating: 2.58
+
+Average Customer Sentiment Score:
+0.1997144699096679
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+2
+"
+P000123,Solace,Shirt,Premium ($200-$500),244.44,3.38,0.6648624241352081,83.33333333333334,6,3,"
+Product ID: P000123
+
+Brand: Solace
+
+Product Type: Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $244.44
+
+Product Rating: 3.38
+
+Average Customer Sentiment Score:
+0.6648624241352081
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P001525,Astra,T-Shirt,Mid Range ($50-$200),134.22,3.82,0.3992948472499847,70.0,10,2,"
+Product ID: P001525
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $134.22
+
+Product Rating: 3.82
+
+Average Customer Sentiment Score:
+0.3992948472499847
+
+Positive Review Percentage:
+70.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+2
+"
+P000562,Willow,Hoodie,Budget ($0-$50),23.79,3.15,0.99985933303833,100.0,4,5,"
+Product ID: P000562
+
+Brand: Willow
+
+Product Type: Hoodie
+
+Price Range: Budget ($0-$50)
+
+Price: $23.79
+
+Product Rating: 3.15
+
+Average Customer Sentiment Score:
+0.99985933303833
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+5
+"
+P000808,Astra,Jeans,Mid Range ($50-$200),125.02,3.22,0.6654873589674631,83.33333333333334,6,4,"
+Product ID: P000808
+
+Brand: Astra
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $125.02
+
+Product Rating: 3.22
+
+Average Customer Sentiment Score:
+0.6654873589674631
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+4
+"
+P000388,GreenLeaf,T-Shirt,Premium ($200-$500),252.09,2.92,0.7750976747936673,88.88888888888889,9,1,"
+Product ID: P000388
+
+Brand: GreenLeaf
+
+Product Type: T-Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $252.09
+
+Product Rating: 2.92
+
+Average Customer Sentiment Score:
+0.7750976747936673
+
+Positive Review Percentage:
+88.88888888888889%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P001733,Zenith,Jeans,Mid Range ($50-$200),166.64,3.39,0.4989480450749397,75.0,8,4,"
+Product ID: P001733
+
+Brand: Zenith
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $166.64
+
+Product Rating: 3.39
+
+Average Customer Sentiment Score:
+0.4989480450749397
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+4
+"
+P000130,NeoTech,T-Shirt,Mid Range ($50-$200),152.63,2.78,0.9981450488169988,100.0,12,1,"
+Product ID: P000130
+
+Brand: NeoTech
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $152.63
+
+Product Rating: 2.78
+
+Average Customer Sentiment Score:
+0.9981450488169988
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+12
+
+Product Cluster:
+1
+"
+P000466,Nimbus,Shirt,Mid Range ($50-$200),76.15,2.61,0.9998466798237392,100.0,7,3,"
+Product ID: P000466
+
+Brand: Nimbus
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $76.15
+
+Product Rating: 2.61
+
+Average Customer Sentiment Score:
+0.9998466798237392
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P000942,Acme,Hoodie,Mid Range ($50-$200),157.0,4.58,0.9973239501317342,100.0,6,5,"
+Product ID: P000942
+
+Brand: Acme
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $157.0
+
+Product Rating: 4.58
+
+Average Customer Sentiment Score:
+0.9973239501317342
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+5
+"
+P001026,Harbor,Shirt,Mid Range ($50-$200),168.25,3.89,0.426271949495588,71.42857142857143,7,3,"
+Product ID: P001026
+
+Brand: Harbor
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $168.25
+
+Product Rating: 3.89
+
+Average Customer Sentiment Score:
+0.426271949495588
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P000195,Willow,Jacket,Mid Range ($50-$200),72.69,3.64,0.4982074946165085,75.0,4,0,"
+Product ID: P000195
+
+Brand: Willow
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $72.69
+
+Product Rating: 3.64
+
+Average Customer Sentiment Score:
+0.4982074946165085
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+0
+"
+P001787,Willow,Jacket,Mid Range ($50-$200),160.19,4.45,0.1992098271846771,60.0,10,0,"
+Product ID: P001787
+
+Brand: Willow
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $160.19
+
+Product Rating: 4.45
+
+Average Customer Sentiment Score:
+0.1992098271846771
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+0
+"
+P000605,Zenith,T-Shirt,Mid Range ($50-$200),83.17,4.32,0.5985209465026855,80.0,10,1,"
+Product ID: P000605
+
+Brand: Zenith
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $83.17
+
+Product Rating: 4.32
+
+Average Customer Sentiment Score:
+0.5985209465026855
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P000437,GreenLeaf,Skirt,Mid Range ($50-$200),130.95,3.37,0.7129440563065665,85.71428571428571,7,1,"
+Product ID: P000437
+
+Brand: GreenLeaf
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $130.95
+
+Product Rating: 3.37
+
+Average Customer Sentiment Score:
+0.7129440563065665
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000870,Orion,Dress,Mid Range ($50-$200),132.71,3.32,0.5988079190254212,80.0,10,3,"
+Product ID: P000870
+
+Brand: Orion
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $132.71
+
+Product Rating: 3.32
+
+Average Customer Sentiment Score:
+0.5988079190254212
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+3
+"
+P001326,GreenLeaf,Skirt,Mid Range ($50-$200),61.39,4.0,0.3328893846935696,66.66666666666666,9,1,"
+Product ID: P001326
+
+Brand: GreenLeaf
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $61.39
+
+Product Rating: 4.0
+
+Average Customer Sentiment Score:
+0.3328893846935696
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P000848,Astra,Shorts,Mid Range ($50-$200),97.68,2.66,0.6663010716438293,83.33333333333334,6,2,"
+Product ID: P000848
+
+Brand: Astra
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $97.68
+
+Product Rating: 2.66
+
+Average Customer Sentiment Score:
+0.6663010716438293
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P001810,NeoTech,Shorts,Mid Range ($50-$200),61.15,3.48,0.8169133717363531,90.9090909090909,11,1,"
+Product ID: P001810
+
+Brand: NeoTech
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $61.15
+
+Product Rating: 3.48
+
+Average Customer Sentiment Score:
+0.8169133717363531
+
+Positive Review Percentage:
+90.9090909090909%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P000110,Zenith,T-Shirt,Mid Range ($50-$200),154.67,2.5,0.6649871269861857,83.33333333333334,6,1,"
+Product ID: P000110
+
+Brand: Zenith
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $154.67
+
+Product Rating: 2.5
+
+Average Customer Sentiment Score:
+0.6649871269861857
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P001997,Zenith,T-Shirt,Mid Range ($50-$200),106.67,2.66,0.6651843190193176,83.33333333333334,6,1,"
+Product ID: P001997
+
+Brand: Zenith
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $106.67
+
+Product Rating: 2.66
+
+Average Customer Sentiment Score:
+0.6651843190193176
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P000726,NeoTech,Shirt,Mid Range ($50-$200),109.92,3.27,0.9983798444271088,100.0,10,3,"
+Product ID: P000726
+
+Brand: NeoTech
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $109.92
+
+Product Rating: 3.27
+
+Average Customer Sentiment Score:
+0.9983798444271088
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+3
+"
+P001619,Everest,Jeans,Budget ($0-$50),15.52,4.2,0.6653501788775126,83.33333333333334,6,4,"
+Product ID: P001619
+
+Brand: Everest
+
+Product Type: Jeans
+
+Price Range: Budget ($0-$50)
+
+Price: $15.52
+
+Product Rating: 4.2
+
+Average Customer Sentiment Score:
+0.6653501788775126
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+4
+"
+P001696,Astra,Shirt,Premium ($200-$500),313.72,3.15,-0.0006432235240936,50.0,6,3,"
+Product ID: P001696
+
+Brand: Astra
+
+Product Type: Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $313.72
+
+Product Rating: 3.15
+
+Average Customer Sentiment Score:
+-0.0006432235240936
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P001212,Harbor,Jeans,Budget ($0-$50),49.21,2.51,0.9990549087524414,100.0,9,4,"
+Product ID: P001212
+
+Brand: Harbor
+
+Product Type: Jeans
+
+Price Range: Budget ($0-$50)
+
+Price: $49.21
+
+Product Rating: 2.51
+
+Average Customer Sentiment Score:
+0.9990549087524414
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+4
+"
+P000729,Orion,Jacket,Budget ($0-$50),49.66,3.89,0.249820314347744,62.5,8,0,"
+Product ID: P000729
+
+Brand: Orion
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $49.66
+
+Product Rating: 3.89
+
+Average Customer Sentiment Score:
+0.249820314347744
+
+Positive Review Percentage:
+62.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+0
+"
+P001800,Astra,T-Shirt,Mid Range ($50-$200),113.98,4.7,0.9994130492210388,100.0,5,2,"
+Product ID: P001800
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $113.98
+
+Product Rating: 4.7
+
+Average Customer Sentiment Score:
+0.9994130492210388
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+2
+"
+P000762,Everest,Sweater,Mid Range ($50-$200),185.46,3.87,0.6455740893588346,82.35294117647058,17,2,"
+Product ID: P000762
+
+Brand: Everest
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $185.46
+
+Product Rating: 3.87
+
+Average Customer Sentiment Score:
+0.6455740893588346
+
+Positive Review Percentage:
+82.35294117647058%
+
+Total Customer Reviews:
+17
+
+Product Cluster:
+2
+"
+P001386,NeoTech,T-Shirt,Mid Range ($50-$200),181.88,2.89,0.8173051693222739,90.9090909090909,11,1,"
+Product ID: P001386
+
+Brand: NeoTech
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $181.88
+
+Product Rating: 2.89
+
+Average Customer Sentiment Score:
+0.8173051693222739
+
+Positive Review Percentage:
+90.9090909090909%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P001594,Pulse,Tracksuit,Mid Range ($50-$200),83.76,4.16,0.6659324467182159,83.33333333333334,6,1,"
+Product ID: P001594
+
+Brand: Pulse
+
+Product Type: Tracksuit
+
+Price Range: Mid Range ($50-$200)
+
+Price: $83.76
+
+Product Rating: 4.16
+
+Average Customer Sentiment Score:
+0.6659324467182159
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P000722,NeoTech,Dress,Mid Range ($50-$200),104.02,4.57,0.0002106204628944,50.0,8,3,"
+Product ID: P000722
+
+Brand: NeoTech
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $104.02
+
+Product Rating: 4.57
+
+Average Customer Sentiment Score:
+0.0002106204628944
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P001287,Harbor,T-Shirt,Mid Range ($50-$200),126.29,3.7,0.1987177491188049,60.0,5,1,"
+Product ID: P001287
+
+Brand: Harbor
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $126.29
+
+Product Rating: 3.7
+
+Average Customer Sentiment Score:
+0.1987177491188049
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+1
+"
+P001779,Orion,Sweater,Mid Range ($50-$200),57.54,4.39,0.5549576679865519,77.77777777777779,9,2,"
+Product ID: P001779
+
+Brand: Orion
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $57.54
+
+Product Rating: 4.39
+
+Average Customer Sentiment Score:
+0.5549576679865519
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+2
+"
+P001152,Pulse,Dress,Mid Range ($50-$200),79.18,3.69,0.5988856315612793,80.0,5,3,"
+Product ID: P001152
+
+Brand: Pulse
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $79.18
+
+Product Rating: 3.69
+
+Average Customer Sentiment Score:
+0.5988856315612793
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P001495,Acme,Dress,Premium ($200-$500),262.79,4.3,0.7134065287453788,85.71428571428571,7,3,"
+Product ID: P001495
+
+Brand: Acme
+
+Product Type: Dress
+
+Price Range: Premium ($200-$500)
+
+Price: $262.79
+
+Product Rating: 4.3
+
+Average Customer Sentiment Score:
+0.7134065287453788
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P001420,NeoTech,T-Shirt,Mid Range ($50-$200),114.66,2.61,0.3997937977313995,70.0,10,1,"
+Product ID: P001420
+
+Brand: NeoTech
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $114.66
+
+Product Rating: 2.61
+
+Average Customer Sentiment Score:
+0.3997937977313995
+
+Positive Review Percentage:
+70.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P001547,Orion,Jeans,Mid Range ($50-$200),149.44,3.91,0.4539628570730036,72.72727272727273,11,4,"
+Product ID: P001547
+
+Brand: Orion
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $149.44
+
+Product Rating: 3.91
+
+Average Customer Sentiment Score:
+0.4539628570730036
+
+Positive Review Percentage:
+72.72727272727273%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+4
+"
+P001265,Harbor,T-Shirt,Mid Range ($50-$200),59.96,3.91,0.3334217468897502,66.66666666666666,6,1,"
+Product ID: P001265
+
+Brand: Harbor
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $59.96
+
+Product Rating: 3.91
+
+Average Customer Sentiment Score:
+0.3334217468897502
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P001614,Solace,Sweater,Mid Range ($50-$200),97.47,2.92,0.3331927557786305,66.66666666666666,6,2,"
+Product ID: P001614
+
+Brand: Solace
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $97.47
+
+Product Rating: 2.92
+
+Average Customer Sentiment Score:
+0.3331927557786305
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P000776,Pulse,Hoodie,Budget ($0-$50),41.51,3.81,0.7772044539451599,88.88888888888889,9,5,"
+Product ID: P000776
+
+Brand: Pulse
+
+Product Type: Hoodie
+
+Price Range: Budget ($0-$50)
+
+Price: $41.51
+
+Product Rating: 3.81
+
+Average Customer Sentiment Score:
+0.7772044539451599
+
+Positive Review Percentage:
+88.88888888888889%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+5
+"
+P001558,Everest,Shirt,Mid Range ($50-$200),142.38,2.78,0.1427402666636875,57.14285714285714,7,3,"
+Product ID: P001558
+
+Brand: Everest
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $142.38
+
+Product Rating: 2.78
+
+Average Customer Sentiment Score:
+0.1427402666636875
+
+Positive Review Percentage:
+57.14285714285714%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P000535,Willow,T-Shirt,Mid Range ($50-$200),62.96,4.14,0.4278041635240827,71.42857142857143,7,1,"
+Product ID: P000535
+
+Brand: Willow
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $62.96
+
+Product Rating: 4.14
+
+Average Customer Sentiment Score:
+0.4278041635240827
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000850,GreenLeaf,Shirt,Mid Range ($50-$200),60.83,4.88,0.712986273424966,85.71428571428571,7,3,"
+Product ID: P000850
+
+Brand: GreenLeaf
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $60.83
+
+Product Rating: 4.88
+
+Average Customer Sentiment Score:
+0.712986273424966
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P001820,NeoTech,Shirt,Mid Range ($50-$200),90.19,3.49,0.7485329061746597,87.5,8,3,"
+Product ID: P001820
+
+Brand: NeoTech
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $90.19
+
+Product Rating: 3.49
+
+Average Customer Sentiment Score:
+0.7485329061746597
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P000838,Nimbus,Dress,Mid Range ($50-$200),57.65,2.85,0.9987787246704102,100.0,5,3,"
+Product ID: P000838
+
+Brand: Nimbus
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $57.65
+
+Product Rating: 2.85
+
+Average Customer Sentiment Score:
+0.9987787246704102
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P001904,Everest,Shorts,Premium ($200-$500),215.5,4.14,0.4280105914388384,71.42857142857143,7,1,"
+Product ID: P001904
+
+Brand: Everest
+
+Product Type: Shorts
+
+Price Range: Premium ($200-$500)
+
+Price: $215.5
+
+Product Rating: 4.14
+
+Average Customer Sentiment Score:
+0.4280105914388384
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000821,Acme,Jeans,Mid Range ($50-$200),166.22,4.44,0.8169818249615756,90.9090909090909,11,4,"
+Product ID: P000821
+
+Brand: Acme
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $166.22
+
+Product Rating: 4.44
+
+Average Customer Sentiment Score:
+0.8169818249615756
+
+Positive Review Percentage:
+90.9090909090909%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+4
+"
+P000403,Orion,Dress,Mid Range ($50-$200),74.66,2.55,0.7984906792640686,90.0,10,3,"
+Product ID: P000403
+
+Brand: Orion
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $74.66
+
+Product Rating: 2.55
+
+Average Customer Sentiment Score:
+0.7984906792640686
+
+Positive Review Percentage:
+90.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+3
+"
+P000173,Harbor,Jacket,Budget ($0-$50),30.32,4.4,0.9992113539150784,100.0,7,0,"
+Product ID: P000173
+
+Brand: Harbor
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $30.32
+
+Product Rating: 4.4
+
+Average Customer Sentiment Score:
+0.9992113539150784
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+0
+"
+P001624,Pulse,Jeans,Mid Range ($50-$200),50.81,4.64,0.2495526000857353,62.5,8,4,"
+Product ID: P001624
+
+Brand: Pulse
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $50.81
+
+Product Rating: 4.64
+
+Average Customer Sentiment Score:
+0.2495526000857353
+
+Positive Review Percentage:
+62.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+4
+"
+P000001,Astra,T-Shirt,Mid Range ($50-$200),157.89,4.08,0.1989923357963562,60.0,5,2,"
+Product ID: P000001
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $157.89
+
+Product Rating: 4.08
+
+Average Customer Sentiment Score:
+0.1989923357963562
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+2
+"
+P000867,GreenLeaf,T-Shirt,Mid Range ($50-$200),183.87,3.85,0.7483977973461151,87.5,8,1,"
+Product ID: P000867
+
+Brand: GreenLeaf
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $183.87
+
+Product Rating: 3.85
+
+Average Customer Sentiment Score:
+0.7483977973461151
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+1
+"
+P001658,Harbor,Shirt,Budget ($0-$50),20.37,3.92,0.9987499475479126,100.0,5,3,"
+Product ID: P001658
+
+Brand: Harbor
+
+Product Type: Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $20.37
+
+Product Rating: 3.92
+
+Average Customer Sentiment Score:
+0.9987499475479126
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P001772,Acme,Jacket,Budget ($0-$50),20.18,4.07,0.9991442710161208,100.0,8,0,"
+Product ID: P001772
+
+Brand: Acme
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $20.18
+
+Product Rating: 4.07
+
+Average Customer Sentiment Score:
+0.9991442710161208
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+0
+"
+P001092,Orion,Shorts,Budget ($0-$50),20.74,3.08,0.7993685483932496,90.0,10,1,"
+Product ID: P001092
+
+Brand: Orion
+
+Product Type: Shorts
+
+Price Range: Budget ($0-$50)
+
+Price: $20.74
+
+Product Rating: 3.08
+
+Average Customer Sentiment Score:
+0.7993685483932496
+
+Positive Review Percentage:
+90.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P000030,Willow,Shirt,Mid Range ($50-$200),139.45,3.93,0.7130904197692871,85.71428571428571,7,3,"
+Product ID: P000030
+
+Brand: Willow
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $139.45
+
+Product Rating: 3.93
+
+Average Customer Sentiment Score:
+0.7130904197692871
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P001411,Astra,T-Shirt,Mid Range ($50-$200),52.89,3.58,0.6647620499134064,83.33333333333334,6,2,"
+Product ID: P001411
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $52.89
+
+Product Rating: 3.58
+
+Average Customer Sentiment Score:
+0.6647620499134064
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P000446,GreenLeaf,Shirt,Mid Range ($50-$200),68.43,3.24,0.4654032667477926,73.33333333333333,15,3,"
+Product ID: P000446
+
+Brand: GreenLeaf
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $68.43
+
+Product Rating: 3.24
+
+Average Customer Sentiment Score:
+0.4654032667477926
+
+Positive Review Percentage:
+73.33333333333333%
+
+Total Customer Reviews:
+15
+
+Product Cluster:
+3
+"
+P000813,Orion,Shorts,Premium ($200-$500),205.74,2.69,0.1426210829189845,57.14285714285714,7,1,"
+Product ID: P000813
+
+Brand: Orion
+
+Product Type: Shorts
+
+Price Range: Premium ($200-$500)
+
+Price: $205.74
+
+Product Rating: 2.69
+
+Average Customer Sentiment Score:
+0.1426210829189845
+
+Positive Review Percentage:
+57.14285714285714%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P001931,Orion,Sweater,Budget ($0-$50),40.77,3.91,0.4994504451751709,75.0,4,2,"
+Product ID: P001931
+
+Brand: Orion
+
+Product Type: Sweater
+
+Price Range: Budget ($0-$50)
+
+Price: $40.77
+
+Product Rating: 3.91
+
+Average Customer Sentiment Score:
+0.4994504451751709
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+2
+"
+P000120,Zenith,T-Shirt,Mid Range ($50-$200),176.19,2.8,0.9985162786075048,100.0,7,1,"
+Product ID: P000120
+
+Brand: Zenith
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $176.19
+
+Product Rating: 2.8
+
+Average Customer Sentiment Score:
+0.9985162786075048
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P001593,Harbor,Shorts,Mid Range ($50-$200),181.12,4.17,0.2720668153329329,63.63636363636363,11,1,"
+Product ID: P001593
+
+Brand: Harbor
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $181.12
+
+Product Rating: 4.17
+
+Average Customer Sentiment Score:
+0.2720668153329329
+
+Positive Review Percentage:
+63.63636363636363%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P000547,Everest,Jacket,Premium ($200-$500),207.26,3.78,0.3330531418323517,66.66666666666666,6,0,"
+Product ID: P000547
+
+Brand: Everest
+
+Product Type: Jacket
+
+Price Range: Premium ($200-$500)
+
+Price: $207.26
+
+Product Rating: 3.78
+
+Average Customer Sentiment Score:
+0.3330531418323517
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+0
+"
+P000039,NeoTech,Sweater,Budget ($0-$50),33.41,4.75,0.4282655801091875,71.42857142857143,7,2,"
+Product ID: P000039
+
+Brand: NeoTech
+
+Product Type: Sweater
+
+Price Range: Budget ($0-$50)
+
+Price: $33.41
+
+Product Rating: 4.75
+
+Average Customer Sentiment Score:
+0.4282655801091875
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+2
+"
+P000230,Astra,Shorts,Mid Range ($50-$200),174.94,2.63,0.0002421637376149,50.0,6,2,"
+Product ID: P000230
+
+Brand: Astra
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $174.94
+
+Product Rating: 2.63
+
+Average Customer Sentiment Score:
+0.0002421637376149
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P000095,NeoTech,Shirt,Mid Range ($50-$200),121.02,4.88,0.3835978599695059,69.23076923076923,13,3,"
+Product ID: P000095
+
+Brand: NeoTech
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $121.02
+
+Product Rating: 4.88
+
+Average Customer Sentiment Score:
+0.3835978599695059
+
+Positive Review Percentage:
+69.23076923076923%
+
+Total Customer Reviews:
+13
+
+Product Cluster:
+3
+"
+P001908,Nimbus,Sweater,Mid Range ($50-$200),51.78,3.81,0.5999512195587158,80.0,5,2,"
+Product ID: P001908
+
+Brand: Nimbus
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $51.78
+
+Product Rating: 3.81
+
+Average Customer Sentiment Score:
+0.5999512195587158
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+2
+"
+P000686,Willow,T-Shirt,Budget ($0-$50),29.92,4.3,0.3334227502346039,66.66666666666666,6,1,"
+Product ID: P000686
+
+Brand: Willow
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $29.92
+
+Product Rating: 4.3
+
+Average Customer Sentiment Score:
+0.3334227502346039
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P001155,Solace,Shirt,Mid Range ($50-$200),175.11,4.06,-0.0004216730594635,50.0,4,3,"
+Product ID: P001155
+
+Brand: Solace
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $175.11
+
+Product Rating: 4.06
+
+Average Customer Sentiment Score:
+-0.0004216730594635
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+3
+"
+P001963,Orion,T-Shirt,Mid Range ($50-$200),172.17,3.84,0.999198148647944,100.0,6,1,"
+Product ID: P001963
+
+Brand: Orion
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $172.17
+
+Product Rating: 3.84
+
+Average Customer Sentiment Score:
+0.999198148647944
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P000109,Everest,Shirt,Mid Range ($50-$200),188.18,4.31,0.428259151322501,71.42857142857143,7,3,"
+Product ID: P000109
+
+Brand: Everest
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $188.18
+
+Product Rating: 4.31
+
+Average Customer Sentiment Score:
+0.428259151322501
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P000439,GreenLeaf,Skirt,Mid Range ($50-$200),115.37,4.45,0.5545267131593492,77.77777777777779,9,1,"
+Product ID: P000439
+
+Brand: GreenLeaf
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $115.37
+
+Product Rating: 4.45
+
+Average Customer Sentiment Score:
+0.5545267131593492
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P000809,GreenLeaf,Shirt,Premium ($200-$500),232.34,3.92,0.1992774009704589,60.0,5,3,"
+Product ID: P000809
+
+Brand: GreenLeaf
+
+Product Type: Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $232.34
+
+Product Rating: 3.92
+
+Average Customer Sentiment Score:
+0.1992774009704589
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P000793,Willow,Jacket,Mid Range ($50-$200),168.0,3.83,0.4280170202255249,71.42857142857143,7,0,"
+Product ID: P000793
+
+Brand: Willow
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $168.0
+
+Product Rating: 3.83
+
+Average Customer Sentiment Score:
+0.4280170202255249
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+0
+"
+P001860,Everest,Tracksuit,Mid Range ($50-$200),86.67,3.46,0.3321594297885895,66.66666666666666,6,1,"
+Product ID: P001860
+
+Brand: Everest
+
+Product Type: Tracksuit
+
+Price Range: Mid Range ($50-$200)
+
+Price: $86.67
+
+Product Rating: 3.46
+
+Average Customer Sentiment Score:
+0.3321594297885895
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P000943,Willow,Skirt,Mid Range ($50-$200),111.58,4.18,0.7136000650269645,85.71428571428571,7,1,"
+Product ID: P000943
+
+Brand: Willow
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $111.58
+
+Product Rating: 4.18
+
+Average Customer Sentiment Score:
+0.7136000650269645
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P001569,Everest,Jeans,Mid Range ($50-$200),51.05,4.46,0.713128387928009,85.71428571428571,7,4,"
+Product ID: P001569
+
+Brand: Everest
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $51.05
+
+Product Rating: 4.46
+
+Average Customer Sentiment Score:
+0.713128387928009
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+4
+"
+P001490,Orion,Shirt,Mid Range ($50-$200),158.04,3.02,0.999583227293832,100.0,7,3,"
+Product ID: P001490
+
+Brand: Orion
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $158.04
+
+Product Rating: 3.02
+
+Average Customer Sentiment Score:
+0.999583227293832
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P001590,Solace,Shirt,Budget ($0-$50),11.57,2.81,0.5996415913105011,80.0,10,3,"
+Product ID: P001590
+
+Brand: Solace
+
+Product Type: Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $11.57
+
+Product Rating: 2.81
+
+Average Customer Sentiment Score:
+0.5996415913105011
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+3
+"
+P000088,Everest,T-Shirt,Mid Range ($50-$200),78.11,4.29,0.7987837374210358,90.0,10,1,"
+Product ID: P000088
+
+Brand: Everest
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $78.11
+
+Product Rating: 4.29
+
+Average Customer Sentiment Score:
+0.7987837374210358
+
+Positive Review Percentage:
+90.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+1
+"
+P000668,Nimbus,Hoodie,Mid Range ($50-$200),168.02,3.77,-0.000224232673645,50.0,4,5,"
+Product ID: P000668
+
+Brand: Nimbus
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $168.02
+
+Product Rating: 3.77
+
+Average Customer Sentiment Score:
+-0.000224232673645
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+5
+"
+P001469,Orion,Jacket,Mid Range ($50-$200),88.87,2.85,0.4995345920324325,75.0,8,0,"
+Product ID: P001469
+
+Brand: Orion
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $88.87
+
+Product Rating: 2.85
+
+Average Customer Sentiment Score:
+0.4995345920324325
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+0
+"
+P000402,Solace,T-Shirt,Mid Range ($50-$200),108.39,4.06,0.9992428521315256,100.0,6,1,"
+Product ID: P000402
+
+Brand: Solace
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $108.39
+
+Product Rating: 4.06
+
+Average Customer Sentiment Score:
+0.9992428521315256
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+1
+"
+P001171,Zenith,Shorts,Premium ($200-$500),208.75,3.46,0.5693853752953666,78.57142857142857,14,1,"
+Product ID: P001171
+
+Brand: Zenith
+
+Product Type: Shorts
+
+Price Range: Premium ($200-$500)
+
+Price: $208.75
+
+Product Rating: 3.46
+
+Average Customer Sentiment Score:
+0.5693853752953666
+
+Positive Review Percentage:
+78.57142857142857%
+
+Total Customer Reviews:
+14
+
+Product Cluster:
+1
+"
+P001826,Solace,Shirt,Mid Range ($50-$200),117.72,4.34,0.2496060505509376,62.5,8,3,"
+Product ID: P001826
+
+Brand: Solace
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $117.72
+
+Product Rating: 4.34
+
+Average Customer Sentiment Score:
+0.2496060505509376
+
+Positive Review Percentage:
+62.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P001602,Everest,Shirt,Premium ($200-$500),260.17,3.79,0.9962853491306304,100.0,2,3,"
+Product ID: P001602
+
+Brand: Everest
+
+Product Type: Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $260.17
+
+Product Rating: 3.79
+
+Average Customer Sentiment Score:
+0.9962853491306304
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+2
+
+Product Cluster:
+3
+"
+P001366,Pulse,Hoodie,Mid Range ($50-$200),95.81,4.13,0.7135892254965646,85.71428571428571,7,5,"
+Product ID: P001366
+
+Brand: Pulse
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $95.81
+
+Product Rating: 4.13
+
+Average Customer Sentiment Score:
+0.7135892254965646
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+5
+"
+P001647,Acme,Hoodie,Mid Range ($50-$200),118.8,3.17,0.3326175371805827,66.66666666666666,15,5,"
+Product ID: P001647
+
+Brand: Acme
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $118.8
+
+Product Rating: 3.17
+
+Average Customer Sentiment Score:
+0.3326175371805827
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+15
+
+Product Cluster:
+5
+"
+P000223,Solace,Jacket,Mid Range ($50-$200),56.92,3.95,0.9998397131760915,100.0,6,0,"
+Product ID: P000223
+
+Brand: Solace
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $56.92
+
+Product Rating: 3.95
+
+Average Customer Sentiment Score:
+0.9998397131760915
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+0
+"
+P001374,Orion,Shirt,Mid Range ($50-$200),92.28,4.35,0.999237298965454,100.0,6,3,"
+Product ID: P001374
+
+Brand: Orion
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $92.28
+
+Product Rating: 4.35
+
+Average Customer Sentiment Score:
+0.999237298965454
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P001052,NeoTech,T-Shirt,Mid Range ($50-$200),196.49,3.9,0.498974268635114,75.0,12,1,"
+Product ID: P001052
+
+Brand: NeoTech
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $196.49
+
+Product Rating: 3.9
+
+Average Customer Sentiment Score:
+0.498974268635114
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+12
+
+Product Cluster:
+1
+"
+P000941,Solace,Hoodie,Budget ($0-$50),25.1,3.23,0.776692807674408,88.88888888888889,9,5,"
+Product ID: P000941
+
+Brand: Solace
+
+Product Type: Hoodie
+
+Price Range: Budget ($0-$50)
+
+Price: $25.1
+
+Product Rating: 3.23
+
+Average Customer Sentiment Score:
+0.776692807674408
+
+Positive Review Percentage:
+88.88888888888889%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+5
+"
+P000766,Pulse,T-Shirt,Budget ($0-$50),22.48,4.44,0.4988597929477691,75.0,8,1,"
+Product ID: P000766
+
+Brand: Pulse
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $22.48
+
+Product Rating: 4.44
+
+Average Customer Sentiment Score:
+0.4988597929477691
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+1
+"
+P000422,Everest,T-Shirt,Premium ($200-$500),257.15,4.37,0.6901156077018151,84.61538461538461,13,1,"
+Product ID: P000422
+
+Brand: Everest
+
+Product Type: T-Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $257.15
+
+Product Rating: 4.37
+
+Average Customer Sentiment Score:
+0.6901156077018151
+
+Positive Review Percentage:
+84.61538461538461%
+
+Total Customer Reviews:
+13
+
+Product Cluster:
+1
+"
+P001910,Nimbus,Hoodie,Mid Range ($50-$200),76.19,3.13,0.9981680512428284,100.0,9,5,"
+Product ID: P001910
+
+Brand: Nimbus
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $76.19
+
+Product Rating: 3.13
+
+Average Customer Sentiment Score:
+0.9981680512428284
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+5
+"
+P001505,NeoTech,Skirt,Mid Range ($50-$200),142.27,3.54,0.6908967678363507,84.61538461538461,13,1,"
+Product ID: P001505
+
+Brand: NeoTech
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $142.27
+
+Product Rating: 3.54
+
+Average Customer Sentiment Score:
+0.6908967678363507
+
+Positive Review Percentage:
+84.61538461538461%
+
+Total Customer Reviews:
+13
+
+Product Cluster:
+1
+"
+P000962,Everest,T-Shirt,Premium ($200-$500),274.66,4.23,0.4990875497460365,75.0,8,1,"
+Product ID: P000962
+
+Brand: Everest
+
+Product Type: T-Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $274.66
+
+Product Rating: 4.23
+
+Average Customer Sentiment Score:
+0.4990875497460365
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+1
+"
+P001380,Harbor,Sweater,Mid Range ($50-$200),113.22,3.08,0.1427291461399623,57.14285714285714,7,2,"
+Product ID: P001380
+
+Brand: Harbor
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $113.22
+
+Product Rating: 3.08
+
+Average Customer Sentiment Score:
+0.1427291461399623
+
+Positive Review Percentage:
+57.14285714285714%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+2
+"
+P000217,Zenith,Hoodie,Mid Range ($50-$200),101.57,3.68,0.7489701583981514,87.5,8,5,"
+Product ID: P000217
+
+Brand: Zenith
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $101.57
+
+Product Rating: 3.68
+
+Average Customer Sentiment Score:
+0.7489701583981514
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+5
+"
+P001238,Pulse,Sweater,Mid Range ($50-$200),166.04,3.79,0.6641640464464823,83.33333333333334,6,2,"
+Product ID: P001238
+
+Brand: Pulse
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $166.04
+
+Product Rating: 3.79
+
+Average Customer Sentiment Score:
+0.6641640464464823
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P000823,Harbor,Shirt,Premium ($200-$500),247.47,4.21,0.9984111666679384,100.0,5,3,"
+Product ID: P000823
+
+Brand: Harbor
+
+Product Type: Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $247.47
+
+Product Rating: 4.21
+
+Average Customer Sentiment Score:
+0.9984111666679384
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P000544,Orion,Hoodie,Premium ($200-$500),248.05,4.0,0.3325273791948954,66.66666666666666,6,5,"
+Product ID: P000544
+
+Brand: Orion
+
+Product Type: Hoodie
+
+Price Range: Premium ($200-$500)
+
+Price: $248.05
+
+Product Rating: 4.0
+
+Average Customer Sentiment Score:
+0.3325273791948954
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+5
+"
+P001276,Harbor,Shorts,Budget ($0-$50),39.32,3.35,0.8175980069420554,90.9090909090909,11,1,"
+Product ID: P001276
+
+Brand: Harbor
+
+Product Type: Shorts
+
+Price Range: Budget ($0-$50)
+
+Price: $39.32
+
+Product Rating: 3.35
+
+Average Customer Sentiment Score:
+0.8175980069420554
+
+Positive Review Percentage:
+90.9090909090909%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P001591,Solace,T-Shirt,Budget ($0-$50),24.97,4.5,0.4986463934183121,75.0,8,1,"
+Product ID: P001591
+
+Brand: Solace
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $24.97
+
+Product Rating: 4.5
+
+Average Customer Sentiment Score:
+0.4986463934183121
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+1
+"
+P001517,GreenLeaf,Shorts,Premium ($200-$500),233.7,4.04,0.9980036105428424,100.0,7,1,"
+Product ID: P001517
+
+Brand: GreenLeaf
+
+Product Type: Shorts
+
+Price Range: Premium ($200-$500)
+
+Price: $233.7
+
+Product Rating: 4.04
+
+Average Customer Sentiment Score:
+0.9980036105428424
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000150,Pulse,T-Shirt,Mid Range ($50-$200),70.84,2.59,0.5996001124382019,80.0,5,1,"
+Product ID: P000150
+
+Brand: Pulse
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $70.84
+
+Product Rating: 2.59
+
+Average Customer Sentiment Score:
+0.5996001124382019
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+1
+"
+P000209,Zenith,Hoodie,Mid Range ($50-$200),144.55,3.2,0.9994924187660216,100.0,5,5,"
+Product ID: P000209
+
+Brand: Zenith
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $144.55
+
+Product Rating: 3.2
+
+Average Customer Sentiment Score:
+0.9994924187660216
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+5
+"
+P000241,Orion,Shirt,Mid Range ($50-$200),148.45,4.55,0.7487485036253929,87.5,8,3,"
+Product ID: P000241
+
+Brand: Orion
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $148.45
+
+Product Rating: 4.55
+
+Average Customer Sentiment Score:
+0.7487485036253929
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P001625,Harbor,Shirt,Mid Range ($50-$200),146.81,4.7,0.4272997719900949,71.42857142857143,7,3,"
+Product ID: P001625
+
+Brand: Harbor
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $146.81
+
+Product Rating: 4.7
+
+Average Customer Sentiment Score:
+0.4272997719900949
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P001303,GreenLeaf,Sweater,Mid Range ($50-$200),54.36,4.34,0.3327762285868327,66.66666666666666,3,2,"
+Product ID: P001303
+
+Brand: GreenLeaf
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $54.36
+
+Product Rating: 4.34
+
+Average Customer Sentiment Score:
+0.3327762285868327
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+2
+"
+P001347,Astra,Hoodie,Mid Range ($50-$200),94.95,3.24,0.6657204230626425,83.33333333333334,6,5,"
+Product ID: P001347
+
+Brand: Astra
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $94.95
+
+Product Rating: 3.24
+
+Average Customer Sentiment Score:
+0.6657204230626425
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+5
+"
+P001782,Zenith,Hoodie,Mid Range ($50-$200),66.11,4.0,-0.0005118310451507,50.0,10,5,"
+Product ID: P001782
+
+Brand: Zenith
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $66.11
+
+Product Rating: 4.0
+
+Average Customer Sentiment Score:
+-0.0005118310451507
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+5
+"
+P001283,Orion,Dress,Mid Range ($50-$200),187.33,3.04,0.9979508817195892,100.0,10,3,"
+Product ID: P001283
+
+Brand: Orion
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $187.33
+
+Product Rating: 3.04
+
+Average Customer Sentiment Score:
+0.9979508817195892
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+3
+"
+P000825,Harbor,Jacket,Budget ($0-$50),23.92,4.35,0.9990359544754028,100.0,13,0,"
+Product ID: P000825
+
+Brand: Harbor
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $23.92
+
+Product Rating: 4.35
+
+Average Customer Sentiment Score:
+0.9990359544754028
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+13
+
+Product Cluster:
+0
+"
+P000142,Zenith,Jacket,Premium ($200-$500),205.73,4.65,0.999237298965454,100.0,3,0,"
+Product ID: P000142
+
+Brand: Zenith
+
+Product Type: Jacket
+
+Price Range: Premium ($200-$500)
+
+Price: $205.73
+
+Product Rating: 4.65
+
+Average Customer Sentiment Score:
+0.999237298965454
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+0
+"
+P001164,GreenLeaf,Shorts,Budget ($0-$50),18.65,3.46,0.4658758560816446,73.33333333333333,15,1,"
+Product ID: P001164
+
+Brand: GreenLeaf
+
+Product Type: Shorts
+
+Price Range: Budget ($0-$50)
+
+Price: $18.65
+
+Product Rating: 3.46
+
+Average Customer Sentiment Score:
+0.4658758560816446
+
+Positive Review Percentage:
+73.33333333333333%
+
+Total Customer Reviews:
+15
+
+Product Cluster:
+1
+"
+P001055,Harbor,Shorts,Mid Range ($50-$200),123.01,4.87,0.4432534144984351,72.22222222222221,18,1,"
+Product ID: P001055
+
+Brand: Harbor
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $123.01
+
+Product Rating: 4.87
+
+Average Customer Sentiment Score:
+0.4432534144984351
+
+Positive Review Percentage:
+72.22222222222221%
+
+Total Customer Reviews:
+18
+
+Product Cluster:
+1
+"
+P000320,Zenith,Skirt,Budget ($0-$50),47.88,2.64,0.2724768952889876,63.63636363636363,11,1,"
+Product ID: P000320
+
+Brand: Zenith
+
+Product Type: Skirt
+
+Price Range: Budget ($0-$50)
+
+Price: $47.88
+
+Product Rating: 2.64
+
+Average Customer Sentiment Score:
+0.2724768952889876
+
+Positive Review Percentage:
+63.63636363636363%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P001046,Zenith,Jeans,Mid Range ($50-$200),157.61,3.31,0.5550151003731622,77.77777777777779,9,4,"
+Product ID: P001046
+
+Brand: Zenith
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $157.61
+
+Product Rating: 3.31
+
+Average Customer Sentiment Score:
+0.5550151003731622
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+4
+"
+P000643,Willow,Shirt,Mid Range ($50-$200),105.35,4.41,0.2719612663442438,63.63636363636363,11,3,"
+Product ID: P000643
+
+Brand: Willow
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $105.35
+
+Product Rating: 4.41
+
+Average Customer Sentiment Score:
+0.2719612663442438
+
+Positive Review Percentage:
+63.63636363636363%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+3
+"
+P001185,Harbor,Skirt,Budget ($0-$50),21.74,3.28,0.5996674299240112,80.0,5,1,"
+Product ID: P001185
+
+Brand: Harbor
+
+Product Type: Skirt
+
+Price Range: Budget ($0-$50)
+
+Price: $21.74
+
+Product Rating: 3.28
+
+Average Customer Sentiment Score:
+0.5996674299240112
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+1
+"
+P000641,Everest,Hoodie,Mid Range ($50-$200),86.47,2.58,0.3327611883481343,66.66666666666666,3,5,"
+Product ID: P000641
+
+Brand: Everest
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $86.47
+
+Product Rating: 2.58
+
+Average Customer Sentiment Score:
+0.3327611883481343
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+5
+"
+P001144,GreenLeaf,Hoodie,Mid Range ($50-$200),96.51,3.72,0.8170367641882463,90.9090909090909,11,5,"
+Product ID: P001144
+
+Brand: GreenLeaf
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $96.51
+
+Product Rating: 3.72
+
+Average Customer Sentiment Score:
+0.8170367641882463
+
+Positive Review Percentage:
+90.9090909090909%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+5
+"
+P000944,GreenLeaf,Dress,Budget ($0-$50),20.32,4.3,0.999123195807139,100.0,6,3,"
+Product ID: P000944
+
+Brand: GreenLeaf
+
+Product Type: Dress
+
+Price Range: Budget ($0-$50)
+
+Price: $20.32
+
+Product Rating: 4.3
+
+Average Customer Sentiment Score:
+0.999123195807139
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P001894,NeoTech,Sweater,Mid Range ($50-$200),51.65,2.56,0.798514473438263,90.0,10,2,"
+Product ID: P001894
+
+Brand: NeoTech
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $51.65
+
+Product Rating: 2.56
+
+Average Customer Sentiment Score:
+0.798514473438263
+
+Positive Review Percentage:
+90.0%
+
+Total Customer Reviews:
+10
+
+Product Cluster:
+2
+"
+P000532,Pulse,Jacket,Budget ($0-$50),21.52,4.71,0.99717977643013,100.0,2,0,"
+Product ID: P000532
+
+Brand: Pulse
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $21.52
+
+Product Rating: 4.71
+
+Average Customer Sentiment Score:
+0.99717977643013
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+2
+
+Product Cluster:
+0
+"
+P001007,Acme,Dress,Mid Range ($50-$200),182.33,3.84,0.999129557609558,100.0,5,3,"
+Product ID: P001007
+
+Brand: Acme
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $182.33
+
+Product Rating: 3.84
+
+Average Customer Sentiment Score:
+0.999129557609558
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P001643,Acme,Shorts,Mid Range ($50-$200),58.73,3.63,0.4280527234077453,71.42857142857143,7,1,"
+Product ID: P001643
+
+Brand: Acme
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $58.73
+
+Product Rating: 3.63
+
+Average Customer Sentiment Score:
+0.4280527234077453
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P001087,Solace,Jacket,Premium ($200-$500),220.52,2.58,0.428618209702628,71.42857142857143,7,0,"
+Product ID: P001087
+
+Brand: Solace
+
+Product Type: Jacket
+
+Price Range: Premium ($200-$500)
+
+Price: $220.52
+
+Product Rating: 2.58
+
+Average Customer Sentiment Score:
+0.428618209702628
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+0
+"
+P000008,Everest,Jacket,Budget ($0-$50),33.86,2.93,0.5547274417347379,77.77777777777779,9,0,"
+Product ID: P000008
+
+Brand: Everest
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $33.86
+
+Product Rating: 2.93
+
+Average Customer Sentiment Score:
+0.5547274417347379
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+0
+"
+P001698,GreenLeaf,Jacket,Mid Range ($50-$200),142.7,4.17,0.6654130617777506,83.33333333333334,6,0,"
+Product ID: P001698
+
+Brand: GreenLeaf
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $142.7
+
+Product Rating: 4.17
+
+Average Customer Sentiment Score:
+0.6654130617777506
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+0
+"
+P001384,Pulse,Jacket,Budget ($0-$50),15.03,4.77,0.7494166642427444,87.5,8,0,"
+Product ID: P001384
+
+Brand: Pulse
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $15.03
+
+Product Rating: 4.77
+
+Average Customer Sentiment Score:
+0.7494166642427444
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+0
+"
+P000464,Orion,Jacket,Budget ($0-$50),44.1,4.33,0.9987643361091614,100.0,5,0,"
+Product ID: P000464
+
+Brand: Orion
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $44.1
+
+Product Rating: 4.33
+
+Average Customer Sentiment Score:
+0.9987643361091614
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+0
+"
+P001519,Harbor,Jeans,Mid Range ($50-$200),130.87,4.32,0.2487029209733009,62.5,8,4,"
+Product ID: P001519
+
+Brand: Harbor
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $130.87
+
+Product Rating: 4.32
+
+Average Customer Sentiment Score:
+0.2487029209733009
+
+Positive Review Percentage:
+62.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+4
+"
+P000634,GreenLeaf,Shirt,Budget ($0-$50),43.85,2.52,0.5989475607872009,80.0,5,3,"
+Product ID: P000634
+
+Brand: GreenLeaf
+
+Product Type: Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $43.85
+
+Product Rating: 2.52
+
+Average Customer Sentiment Score:
+0.5989475607872009
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+3
+"
+P001295,Acme,Jeans,Mid Range ($50-$200),80.66,4.68,0.9991454243659972,100.0,5,4,"
+Product ID: P001295
+
+Brand: Acme
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $80.66
+
+Product Rating: 4.68
+
+Average Customer Sentiment Score:
+0.9991454243659972
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+4
+"
+P000778,Astra,T-Shirt,Mid Range ($50-$200),56.05,3.65,0.3328947822252909,66.66666666666666,3,2,"
+Product ID: P000778
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $56.05
+
+Product Rating: 3.65
+
+Average Customer Sentiment Score:
+0.3328947822252909
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+2
+"
+P001668,GreenLeaf,T-Shirt,Budget ($0-$50),47.02,2.74,0.9998359382152556,100.0,2,1,"
+Product ID: P001668
+
+Brand: GreenLeaf
+
+Product Type: T-Shirt
+
+Price Range: Budget ($0-$50)
+
+Price: $47.02
+
+Product Rating: 2.74
+
+Average Customer Sentiment Score:
+0.9998359382152556
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+2
+
+Product Cluster:
+1
+"
+P000700,GreenLeaf,Jeans,Mid Range ($50-$200),186.13,2.87,0.5544740756352743,77.77777777777779,9,4,"
+Product ID: P000700
+
+Brand: GreenLeaf
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $186.13
+
+Product Rating: 2.87
+
+Average Customer Sentiment Score:
+0.5544740756352743
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+4
+"
+P001127,Everest,Hoodie,Mid Range ($50-$200),150.71,4.12,0.6663124064604441,83.33333333333334,6,5,"
+Product ID: P001127
+
+Brand: Everest
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $150.71
+
+Product Rating: 4.12
+
+Average Customer Sentiment Score:
+0.6663124064604441
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+5
+"
+P000539,Zenith,Jeans,Budget ($0-$50),45.11,3.38,0.0002229809761047,50.0,4,4,"
+Product ID: P000539
+
+Brand: Zenith
+
+Product Type: Jeans
+
+Price Range: Budget ($0-$50)
+
+Price: $45.11
+
+Product Rating: 3.38
+
+Average Customer Sentiment Score:
+0.0002229809761047
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+4
+"
+P000068,Acme,Sweater,Budget ($0-$50),46.36,3.76,0.6666105488936106,83.33333333333334,6,2,"
+Product ID: P000068
+
+Brand: Acme
+
+Product Type: Sweater
+
+Price Range: Budget ($0-$50)
+
+Price: $46.36
+
+Product Rating: 3.76
+
+Average Customer Sentiment Score:
+0.6666105488936106
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P001450,Zenith,Shirt,Mid Range ($50-$200),108.38,2.96,0.6645208299160004,83.33333333333334,6,3,"
+Product ID: P001450
+
+Brand: Zenith
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $108.38
+
+Product Rating: 2.96
+
+Average Customer Sentiment Score:
+0.6645208299160004
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P000665,Zenith,T-Shirt,Mid Range ($50-$200),76.18,3.96,0.4268380062920706,71.42857142857143,7,1,"
+Product ID: P000665
+
+Brand: Zenith
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $76.18
+
+Product Rating: 3.96
+
+Average Customer Sentiment Score:
+0.4268380062920706
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000050,Everest,Shorts,Mid Range ($50-$200),108.18,4.17,0.5546189149220785,77.77777777777779,9,1,"
+Product ID: P000050
+
+Brand: Everest
+
+Product Type: Shorts
+
+Price Range: Mid Range ($50-$200)
+
+Price: $108.18
+
+Product Rating: 4.17
+
+Average Customer Sentiment Score:
+0.5546189149220785
+
+Positive Review Percentage:
+77.77777777777779%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P000487,Willow,Skirt,Budget ($0-$50),22.21,3.4,0.1428530897412981,57.14285714285714,7,1,"
+Product ID: P000487
+
+Brand: Willow
+
+Product Type: Skirt
+
+Price Range: Budget ($0-$50)
+
+Price: $22.21
+
+Product Rating: 3.4
+
+Average Customer Sentiment Score:
+0.1428530897412981
+
+Positive Review Percentage:
+57.14285714285714%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000361,Harbor,T-Shirt,Mid Range ($50-$200),168.32,2.69,0.1424827490534101,57.14285714285714,7,1,"
+Product ID: P000361
+
+Brand: Harbor
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $168.32
+
+Product Rating: 2.69
+
+Average Customer Sentiment Score:
+0.1424827490534101
+
+Positive Review Percentage:
+57.14285714285714%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P001829,Harbor,Dress,Budget ($0-$50),36.94,3.88,0.6662485599517822,83.33333333333334,6,3,"
+Product ID: P001829
+
+Brand: Harbor
+
+Product Type: Dress
+
+Price Range: Budget ($0-$50)
+
+Price: $36.94
+
+Product Rating: 3.88
+
+Average Customer Sentiment Score:
+0.6662485599517822
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P000737,Zenith,Tracksuit,Mid Range ($50-$200),92.23,4.32,0.3317365513907538,66.66666666666666,9,1,"
+Product ID: P000737
+
+Brand: Zenith
+
+Product Type: Tracksuit
+
+Price Range: Mid Range ($50-$200)
+
+Price: $92.23
+
+Product Rating: 4.32
+
+Average Customer Sentiment Score:
+0.3317365513907538
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+9
+
+Product Cluster:
+1
+"
+P000226,Solace,Jacket,Mid Range ($50-$200),118.33,2.8,0.4280662281172616,71.42857142857143,7,0,"
+Product ID: P000226
+
+Brand: Solace
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $118.33
+
+Product Rating: 2.8
+
+Average Customer Sentiment Score:
+0.4280662281172616
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+0
+"
+P000071,Willow,Shirt,Mid Range ($50-$200),138.82,3.76,0.4277957805565425,71.42857142857143,14,3,"
+Product ID: P000071
+
+Brand: Willow
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $138.82
+
+Product Rating: 3.76
+
+Average Customer Sentiment Score:
+0.4277957805565425
+
+Positive Review Percentage:
+71.42857142857143%
+
+Total Customer Reviews:
+14
+
+Product Cluster:
+3
+"
+P001785,Solace,Jeans,Mid Range ($50-$200),90.15,4.11,0.3320049047470093,66.66666666666666,6,4,"
+Product ID: P001785
+
+Brand: Solace
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $90.15
+
+Product Rating: 4.11
+
+Average Customer Sentiment Score:
+0.3320049047470093
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+4
+"
+P000128,Everest,Jeans,Mid Range ($50-$200),55.25,4.74,0.5995977759361267,80.0,5,4,"
+Product ID: P000128
+
+Brand: Everest
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $55.25
+
+Product Rating: 4.74
+
+Average Customer Sentiment Score:
+0.5995977759361267
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+4
+"
+P001660,GreenLeaf,Hoodie,Mid Range ($50-$200),113.12,4.72,0.9966323673725128,100.0,4,5,"
+Product ID: P001660
+
+Brand: GreenLeaf
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $113.12
+
+Product Rating: 4.72
+
+Average Customer Sentiment Score:
+0.9966323673725128
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+5
+"
+P001582,Solace,Jeans,Premium ($200-$500),242.11,3.76,0.6648756464322408,83.33333333333334,6,4,"
+Product ID: P001582
+
+Brand: Solace
+
+Product Type: Jeans
+
+Price Range: Premium ($200-$500)
+
+Price: $242.11
+
+Product Rating: 3.76
+
+Average Customer Sentiment Score:
+0.6648756464322408
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+4
+"
+P001077,Zenith,T-Shirt,Mid Range ($50-$200),114.4,2.88,0.7139601452010018,85.71428571428571,7,1,"
+Product ID: P001077
+
+Brand: Zenith
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $114.4
+
+Product Rating: 2.88
+
+Average Customer Sentiment Score:
+0.7139601452010018
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P001498,Acme,T-Shirt,Premium ($200-$500),207.25,2.84,0.7138926642281669,85.71428571428571,7,1,"
+Product ID: P001498
+
+Brand: Acme
+
+Product Type: T-Shirt
+
+Price Range: Premium ($200-$500)
+
+Price: $207.25
+
+Product Rating: 2.84
+
+Average Customer Sentiment Score:
+0.7138926642281669
+
+Positive Review Percentage:
+85.71428571428571%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+1
+"
+P000499,Zenith,Hoodie,Mid Range ($50-$200),115.81,3.31,-0.2001023054122924,40.0,5,5,"
+Product ID: P000499
+
+Brand: Zenith
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $115.81
+
+Product Rating: 3.31
+
+Average Customer Sentiment Score:
+-0.2001023054122924
+
+Positive Review Percentage:
+40.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+5
+"
+P000858,Harbor,Sweater,Mid Range ($50-$200),185.03,3.02,0.7482990771532059,87.5,8,2,"
+Product ID: P000858
+
+Brand: Harbor
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $185.03
+
+Product Rating: 3.02
+
+Average Customer Sentiment Score:
+0.7482990771532059
+
+Positive Review Percentage:
+87.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+2
+"
+P000101,Willow,Jacket,Budget ($0-$50),32.69,2.69,0.6654121180375417,83.33333333333334,12,0,"
+Product ID: P000101
+
+Brand: Willow
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $32.69
+
+Product Rating: 2.69
+
+Average Customer Sentiment Score:
+0.6654121180375417
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+12
+
+Product Cluster:
+0
+"
+P000606,Everest,Dress,Mid Range ($50-$200),138.24,4.74,0.9989198669791222,100.0,8,3,"
+Product ID: P000606
+
+Brand: Everest
+
+Product Type: Dress
+
+Price Range: Mid Range ($50-$200)
+
+Price: $138.24
+
+Product Rating: 4.74
+
+Average Customer Sentiment Score:
+0.9989198669791222
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P001539,Willow,Shirt,Mid Range ($50-$200),103.59,2.58,0.4986437037587166,75.0,8,3,"
+Product ID: P001539
+
+Brand: Willow
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $103.59
+
+Product Rating: 2.58
+
+Average Customer Sentiment Score:
+0.4986437037587166
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P000618,Harbor,T-Shirt,Mid Range ($50-$200),182.11,3.1,0.2496588379144668,62.5,8,1,"
+Product ID: P000618
+
+Brand: Harbor
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $182.11
+
+Product Rating: 3.1
+
+Average Customer Sentiment Score:
+0.2496588379144668
+
+Positive Review Percentage:
+62.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+1
+"
+P001526,Orion,Shirt,Mid Range ($50-$200),117.09,4.36,-0.4282907332692827,28.57142857142857,7,3,"
+Product ID: P001526
+
+Brand: Orion
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $117.09
+
+Product Rating: 4.36
+
+Average Customer Sentiment Score:
+-0.4282907332692827
+
+Positive Review Percentage:
+28.57142857142857%
+
+Total Customer Reviews:
+7
+
+Product Cluster:
+3
+"
+P000132,Willow,Hoodie,Mid Range ($50-$200),135.87,2.56,0.1997832417488098,60.0,5,5,"
+Product ID: P000132
+
+Brand: Willow
+
+Product Type: Hoodie
+
+Price Range: Mid Range ($50-$200)
+
+Price: $135.87
+
+Product Rating: 2.56
+
+Average Customer Sentiment Score:
+0.1997832417488098
+
+Positive Review Percentage:
+60.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+5
+"
+P001043,NeoTech,Jeans,Budget ($0-$50),28.05,4.84,0.6000146269798279,80.0,5,4,"
+Product ID: P001043
+
+Brand: NeoTech
+
+Product Type: Jeans
+
+Price Range: Budget ($0-$50)
+
+Price: $28.05
+
+Product Rating: 4.84
+
+Average Customer Sentiment Score:
+0.6000146269798279
+
+Positive Review Percentage:
+80.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+4
+"
+P001350,Harbor,Jacket,Mid Range ($50-$200),75.16,3.55,0.666306604941686,83.33333333333334,6,0,"
+Product ID: P001350
+
+Brand: Harbor
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $75.16
+
+Product Rating: 3.55
+
+Average Customer Sentiment Score:
+0.666306604941686
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+0
+"
+P000478,Zenith,Skirt,Mid Range ($50-$200),199.79,2.66,0.4537652785127813,72.72727272727273,11,1,"
+Product ID: P000478
+
+Brand: Zenith
+
+Product Type: Skirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $199.79
+
+Product Rating: 2.66
+
+Average Customer Sentiment Score:
+0.4537652785127813
+
+Positive Review Percentage:
+72.72727272727273%
+
+Total Customer Reviews:
+11
+
+Product Cluster:
+1
+"
+P000207,GreenLeaf,Dress,Premium ($200-$500),227.28,3.4,0.4991525262594223,75.0,8,3,"
+Product ID: P000207
+
+Brand: GreenLeaf
+
+Product Type: Dress
+
+Price Range: Premium ($200-$500)
+
+Price: $227.28
+
+Product Rating: 3.4
+
+Average Customer Sentiment Score:
+0.4991525262594223
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P001536,Nimbus,Jacket,Budget ($0-$50),37.11,3.92,0.3327611883481343,66.66666666666666,3,0,"
+Product ID: P001536
+
+Brand: Nimbus
+
+Product Type: Jacket
+
+Price Range: Budget ($0-$50)
+
+Price: $37.11
+
+Product Rating: 3.92
+
+Average Customer Sentiment Score:
+0.3327611883481343
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+0
+"
+P000734,Acme,Jeans,Mid Range ($50-$200),86.34,4.58,0.4988194853067398,75.0,8,4,"
+Product ID: P000734
+
+Brand: Acme
+
+Product Type: Jeans
+
+Price Range: Mid Range ($50-$200)
+
+Price: $86.34
+
+Product Rating: 4.58
+
+Average Customer Sentiment Score:
+0.4988194853067398
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+4
+"
+P001221,NeoTech,Shirt,Mid Range ($50-$200),79.93,4.51,0.4992703720927238,75.0,8,3,"
+Product ID: P001221
+
+Brand: NeoTech
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $79.93
+
+Product Rating: 4.51
+
+Average Customer Sentiment Score:
+0.4992703720927238
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+3
+"
+P000043,Acme,Sweater,Mid Range ($50-$200),148.55,3.66,0.3335073788960774,66.66666666666666,3,2,"
+Product ID: P000043
+
+Brand: Acme
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $148.55
+
+Product Rating: 3.66
+
+Average Customer Sentiment Score:
+0.3335073788960774
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+2
+"
+P000802,Orion,Sweater,Mid Range ($50-$200),173.34,3.74,0.666290948788325,83.33333333333334,6,2,"
+Product ID: P000802
+
+Brand: Orion
+
+Product Type: Sweater
+
+Price Range: Mid Range ($50-$200)
+
+Price: $173.34
+
+Product Rating: 3.74
+
+Average Customer Sentiment Score:
+0.666290948788325
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+2
+"
+P000652,Pulse,T-Shirt,Mid Range ($50-$200),76.67,3.2,0.9980631828308104,100.0,5,1,"
+Product ID: P000652
+
+Brand: Pulse
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $76.67
+
+Product Rating: 3.2
+
+Average Customer Sentiment Score:
+0.9980631828308104
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+5
+
+Product Cluster:
+1
+"
+P000336,Acme,T-Shirt,Mid Range ($50-$200),121.89,4.21,0.4999832808971405,75.0,8,1,"
+Product ID: P000336
+
+Brand: Acme
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $121.89
+
+Product Rating: 4.21
+
+Average Customer Sentiment Score:
+0.4999832808971405
+
+Positive Review Percentage:
+75.0%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+1
+"
+P000503,Harbor,Shirt,Mid Range ($50-$200),90.57,4.4,0.6654206415017446,83.33333333333334,6,3,"
+Product ID: P000503
+
+Brand: Harbor
+
+Product Type: Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $90.57
+
+Product Rating: 4.4
+
+Average Customer Sentiment Score:
+0.6654206415017446
+
+Positive Review Percentage:
+83.33333333333334%
+
+Total Customer Reviews:
+6
+
+Product Cluster:
+3
+"
+P000996,Harbor,T-Shirt,Mid Range ($50-$200),54.74,4.64,0.1656577239433924,58.333333333333336,12,1,"
+Product ID: P000996
+
+Brand: Harbor
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $54.74
+
+Product Rating: 4.64
+
+Average Customer Sentiment Score:
+0.1656577239433924
+
+Positive Review Percentage:
+58.333333333333336%
+
+Total Customer Reviews:
+12
+
+Product Cluster:
+1
+"
+P000774,Harbor,Sweater,Budget ($0-$50),20.4,4.69,0.2489354163408279,62.5,8,2,"
+Product ID: P000774
+
+Brand: Harbor
+
+Product Type: Sweater
+
+Price Range: Budget ($0-$50)
+
+Price: $20.4
+
+Product Rating: 4.69
+
+Average Customer Sentiment Score:
+0.2489354163408279
+
+Positive Review Percentage:
+62.5%
+
+Total Customer Reviews:
+8
+
+Product Cluster:
+2
+"
+P000119,Pulse,Dress,Premium ($200-$500),265.21,4.77,0.3334910670916239,66.66666666666666,3,3,"
+Product ID: P000119
+
+Brand: Pulse
+
+Product Type: Dress
+
+Price Range: Premium ($200-$500)
+
+Price: $265.21
+
+Product Rating: 4.77
+
+Average Customer Sentiment Score:
+0.3334910670916239
+
+Positive Review Percentage:
+66.66666666666666%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+3
+"
+P001242,Astra,T-Shirt,Mid Range ($50-$200),99.47,3.84,0.9974815249443054,100.0,3,2,"
+Product ID: P001242
+
+Brand: Astra
+
+Product Type: T-Shirt
+
+Price Range: Mid Range ($50-$200)
+
+Price: $99.47
+
+Product Rating: 3.84
+
+Average Customer Sentiment Score:
+0.9974815249443054
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+2
+"
+P000511,Nimbus,Jeans,Budget ($0-$50),34.13,2.6,0.0002079159021377,50.0,4,4,"
+Product ID: P000511
+
+Brand: Nimbus
+
+Product Type: Jeans
+
+Price Range: Budget ($0-$50)
+
+Price: $34.13
+
+Product Rating: 2.6
+
+Average Customer Sentiment Score:
+0.0002079159021377
+
+Positive Review Percentage:
+50.0%
+
+Total Customer Reviews:
+4
+
+Product Cluster:
+4
+"
+P000712,GreenLeaf,Jacket,Mid Range ($50-$200),97.46,4.56,0.9991037050882976,100.0,3,0,"
+Product ID: P000712
+
+Brand: GreenLeaf
+
+Product Type: Jacket
+
+Price Range: Mid Range ($50-$200)
+
+Price: $97.46
+
+Product Rating: 4.56
+
+Average Customer Sentiment Score:
+0.9991037050882976
+
+Positive Review Percentage:
+100.0%
+
+Total Customer Reviews:
+3
+
+Product Cluster:
+0
+"
